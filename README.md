@@ -50,6 +50,17 @@ cd my-turborepo
 pnpm dev
 ```
 
+
+### Connect to the database
+
+```
+//check root .env file for POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT
+docker compose up -d
+docker ps // check the  CONTAINER ID
+docker exec -it CONTAINER ID bash
+psql -h localhost -p 5432 -U username -d dbName -W
+```
+
 ### Remote Caching
 
 > [!TIP]
