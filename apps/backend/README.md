@@ -45,6 +45,15 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
+
+## Generate ERD Diagram for the project
+
+```bash
+npx prisma generate
+
+```
+
+
 ## Run tests
 
 ```bash
