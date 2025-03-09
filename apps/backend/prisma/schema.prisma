@@ -131,7 +131,7 @@ model User {
   createdAt     DateTime    @default(now())
   updatedAt     DateTime    @updatedAt
   status        UserStatus  @default(ACTIVE)
-  
+  imageUrl      String?
   // Relationships
   userRoles     UserRole[]
   gymMember     GymMember?
