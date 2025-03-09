@@ -65,39 +65,190 @@ enum NotificationStatus {
   PENDING
 }
 
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  ARCHIVED
+}
+
+enum PermissionAction {
+  CREATE
+  READ
+  UPDATE
+  DELETE
+  MANAGE
+}
+
+enum PermissionResource {
+  USERS
+  ROLES
+  GOALS
+  ATTENDANCES
+  MOODS
+  ALERTS
+  NOTIFICATIONS
+  PROFILES
+}
+
+enum PlanCategory {
+  WEIGHT_LOSS
+  MUSCLE_GAIN
+  CARDIO
+  FLEXIBILITY
+  GENERAL_FITNESS
+  SPORTS_SPECIFIC
+  REHABILITATION
+}
+
+enum PlanLevel {
+  BASIC
+  INTERMEDIATE
+  ADVANCED
+  PREMIUM
+}
+
+enum PlanStatus {
+  ACTIVE
+  COMPLETED
+  CANCELLED
+  EXPIRED
+}
+
 // Models
 model User {
-  id            String    @id @default(uuid()) @db.Uuid
+  id            String      @id @default(uuid()) @db.Uuid
   firstName     String
   lastName      String
-  email         String    @unique
+  email         String      @unique
   phone         String?
-  dateOfBirth   DateTime  @db.Date
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  isActive      Boolean   @default(true)
-  isArchived    Boolean   @default(false)
-  userType      UserType
-
-  // Self-referential relationships
-  coach         User?     @relation("UserToCoach", fields: [coachId], references: [id])
-  coachId       String?   @db.Uuid
-  coachees      User[]    @relation("UserToCoach")
-
-  nutritionist  User?     @relation("UserToNutritionist", fields: [nutritionistId], references: [id])
-  nutritionistId String?  @db.Uuid
-  clients       User[]    @relation("UserToNutritionist")
-
-  // Relationships to other models
+  dateOfBirth   DateTime    @db.Date
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  status        UserStatus  @default(ACTIVE)
+  
+  // Relationships
+  userRoles     UserRole[]
+  gymMember     GymMember?
+  coach         Coach?
+  nutritionist  Nutritionist?
+  
+  // Other relationships
   goals         Goal[]
   attendances   Attendance[]
   moods         Mood[]
   alerts        Alert[]
   notifications Notification[]
 
+  @@map("users")
   @@index([email])
+}
+
+model Role {
+  id          String      @id @default(uuid()) @db.Uuid
+  name        String      @unique
+  description String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  
+  // Relationships
+  userRoles   UserRole[]
+  permissions RolePermission[]
+
+  @@map("roles")
+}
+
+model UserRole {
+  id        String   @id @default(uuid()) @db.Uuid
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String   @db.Uuid
+  role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  roleId    String   @db.Uuid
+  createdAt DateTime @default(now())
+
+  @@unique([userId, roleId])
+  @@map("user_roles")
+  @@index([userId])
+  @@index([roleId])
+}
+
+model Permission {
+  id          String             @id @default(uuid()) @db.Uuid
+  action      PermissionAction
+  resource    PermissionResource
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  // Relationships
+  rolePermissions RolePermission[]
+
+  @@unique([action, resource])
+  @@map("permissions")
+}
+
+model RolePermission {
+  id           String     @id @default(uuid()) @db.Uuid
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  roleId       String     @db.Uuid
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+  permissionId String     @db.Uuid
+  createdAt    DateTime   @default(now())
+
+  @@unique([roleId, permissionId])
+  @@map("role_permissions")
+  @@index([roleId])
+  @@index([permissionId])
+}
+
+model GymMember {
+  id              String       @id @default(uuid()) @db.Uuid
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId          String       @unique @db.Uuid
+  membershipId    String?
+  startDate       DateTime     @db.Date
+  endDate         DateTime?    @db.Date
+  
+  // Add this new relationship
+  memberPlans     MemberPlan[]
+  
+  // Existing relationships
+  coach           Coach?       @relation(fields: [coachId], references: [id])
+  coachId         String?      @db.Uuid
+  nutritionist    Nutritionist? @relation(fields: [nutritionistId], references: [id])
+  nutritionistId  String?      @db.Uuid
+
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@map("gym_members")
   @@index([coachId])
   @@index([nutritionistId])
+}
+
+model Coach {
+  id            String      @id @default(uuid()) @db.Uuid
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String      @unique @db.Uuid
+  specialties   String[]
+  certification String?
+  gymMembers    GymMember[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("coaches")
+}
+
+model Nutritionist {
+  id            String      @id @default(uuid()) @db.Uuid
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String      @unique @db.Uuid
+  specialties   String[]
+  certification String?
+  gymMembers    GymMember[]
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("nutritionists")
 }
 
 model Goal {
@@ -112,6 +263,7 @@ model Goal {
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 
+  @@map("goals")
   @@index([userId])
 }
 
@@ -124,6 +276,7 @@ model Attendance {
   createdAt DateTime         @default(now())
   updatedAt DateTime         @updatedAt
 
+  @@map("attendances")
   @@index([userId])
   @@index([date])
 }
@@ -138,6 +291,7 @@ model Mood {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
+  @@map("moods")
   @@index([userId])
   @@index([date])
 }
@@ -152,6 +306,7 @@ model Alert {
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
 
+  @@map("alerts")
   @@index([userId])
 }
 
@@ -165,5 +320,44 @@ model Notification {
   createdAt DateTime           @default(now())
   updatedAt DateTime           @updatedAt
 
+  @@map("notifications")
   @@index([userId])
+}
+
+model PlanTemplate {
+  id          String       @id @default(uuid()) @db.Uuid
+  name        String       @unique
+  description String
+  category    PlanCategory
+  level       PlanLevel
+  duration    Int          // Duration in days
+  isActive    Boolean      @default(true)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  // Relationships
+  memberPlans MemberPlan[]
+
+  @@map("plan_templates")
+  @@index([category])
+  @@index([level])
+}
+
+model MemberPlan {
+  id              String      @id @default(uuid()) @db.Uuid
+  gymMember       GymMember   @relation(fields: [gymMemberId], references: [id])
+  gymMemberId     String      @db.Uuid
+  planTemplate    PlanTemplate @relation(fields: [planTemplateId], references: [id])
+  planTemplateId  String      @db.Uuid
+  startDate       DateTime    @db.Date
+  endDate         DateTime    @db.Date
+  status          PlanStatus  @default(ACTIVE)
+  notes           String?
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@map("member_plans")
+  @@index([gymMemberId])
+  @@index([planTemplateId])
+  @@index([status])
 }
