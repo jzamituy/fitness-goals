@@ -1,6 +1,6 @@
 // IMPORTANT: Make sure to import `instrument.ts` at the top of your file. Sentry will not work otherwise.
 import { SentryExceptionFilter } from './filters/sentry-exception-filter.js';
-import './instrument.ts';
+import './instrument';
 
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
