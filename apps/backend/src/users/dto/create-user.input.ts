@@ -1,6 +1,7 @@
 import { Field, InputType } from '@nestjs/graphql';
+import { UserStatus } from '@prisma/client';
 import { IsEmail, IsEnum, IsOptional, IsString, IsUUID } from 'class-validator';
-import { UserType } from '../models/user.model';
+import { UserType } from '../enums/user-type.enum';
 
 @InputType()
 export class CreateUserInput {
@@ -37,4 +38,10 @@ export class CreateUserInput {
   @IsUUID()
   @IsOptional()
   nutritionistId?: string;
+
+  @Field(() => UserStatus, { defaultValue: UserStatus.ACTIVE })
+  status?: UserStatus;
+
+  @Field({ nullable: true })
+  imageUrl?: string;
 }

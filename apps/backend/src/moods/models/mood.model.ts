@@ -1,6 +1,6 @@
 import { Field, ID, ObjectType, registerEnumType } from '@nestjs/graphql';
 import { Mood as PrismaMood } from '@prisma/client';
-import { User } from '../../users/models/user.model';
+import { User } from '../../generated/graphql';
 
 export enum MoodLevel {
   VERY_BAD = 'VERY_BAD',

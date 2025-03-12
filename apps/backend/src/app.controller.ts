@@ -7,6 +7,7 @@ export class AppController {
 
   @Get()
   getHello(): string {
+    throw new Error('test sentry');
     return this.appService.getHello();
   }
 }

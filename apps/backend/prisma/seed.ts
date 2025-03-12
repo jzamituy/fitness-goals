@@ -1,19 +1,19 @@
 import {
-    AlertStatus,
-    AlertType,
-    AttendanceStatus,
-    GoalStatus,
-    MoodLevel,
-    NotificationStatus,
-    NotificationType,
-    Permission,
-    PermissionAction,
-    PermissionResource,
-    PlanCategory,
-    PlanLevel,
-    PlanStatus,
-    PrismaClient,
-    UserStatus,
+  AlertStatus,
+  AlertType,
+  AttendanceStatus,
+  GoalStatus,
+  MoodLevel,
+  NotificationStatus,
+  NotificationType,
+  Permission,
+  PermissionAction,
+  PermissionResource,
+  PlanCategory,
+  PlanLevel,
+  PlanStatus,
+  PrismaClient,
+  UserStatus,
 } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -158,7 +158,7 @@ async function main() {
   console.log('Role permissions assigned');
 
   // Create users
-  const adminUser = await prisma.user.create({
+  await prisma.user.create({
     data: {
       firstName: 'Admin',
       lastName: 'User',
@@ -734,12 +734,30 @@ async function main() {
 
   console.log('Seeding completed successfully');
 }
-
+/* 
 main()
   .catch((e) => {
     console.error(e);
     process.exit(1);
   })
-  .finally(async () => {
-    await prisma.$disconnect();
+  .finally(() => {
+    const fn = async () => {
+      await prisma.$disconnect();
+    };
+    fn()
+      .then(() => {
+        console.log('Disconnected from database');
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+    return;
+  }); */
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(() => {
+    prisma.$disconnect().catch(console.error);
   });

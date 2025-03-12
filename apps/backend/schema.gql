@@ -1,0 +1,3184 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Alert {
+  createdAt: DateTime!
+  gymMember: GymMember!
+  gymMemberId: String!
+  id: ID!
+  reason: String!
+  status: AlertStatus!
+  type: AlertType!
+  updatedAt: DateTime!
+}
+
+input AlertCreateManyGymMemberInput {
+  createdAt: DateTime
+  id: String
+  reason: String!
+  status: AlertStatus!
+  type: AlertType!
+  updatedAt: DateTime
+}
+
+input AlertCreateManyGymMemberInputEnvelope {
+  data: [AlertCreateManyGymMemberInput!]!
+  skipDuplicates: Boolean
+}
+
+input AlertCreateNestedManyWithoutGymMemberInput {
+  connect: [AlertWhereUniqueInput!]
+  connectOrCreate: [AlertCreateOrConnectWithoutGymMemberInput!]
+  create: [AlertCreateWithoutGymMemberInput!]
+  createMany: AlertCreateManyGymMemberInputEnvelope
+}
+
+input AlertCreateOrConnectWithoutGymMemberInput {
+  create: AlertCreateWithoutGymMemberInput!
+  where: AlertWhereUniqueInput!
+}
+
+input AlertCreateWithoutGymMemberInput {
+  createdAt: DateTime
+  id: String
+  reason: String!
+  status: AlertStatus!
+  type: AlertType!
+  updatedAt: DateTime
+}
+
+input AlertListRelationFilter {
+  every: AlertWhereInput
+  none: AlertWhereInput
+  some: AlertWhereInput
+}
+
+input AlertOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input AlertScalarWhereInput {
+  AND: [AlertScalarWhereInput!]
+  NOT: [AlertScalarWhereInput!]
+  OR: [AlertScalarWhereInput!]
+  createdAt: DateTimeFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  reason: StringFilter
+  status: EnumAlertStatusFilter
+  type: EnumAlertTypeFilter
+  updatedAt: DateTimeFilter
+}
+
+enum AlertStatus {
+  PENDING
+  RESOLVED
+}
+
+enum AlertType {
+  HIGH
+  LOW
+  MEDIUM
+}
+
+input AlertUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  reason: StringFieldUpdateOperationsInput
+  status: EnumAlertStatusFieldUpdateOperationsInput
+  type: EnumAlertTypeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input AlertUpdateManyWithWhereWithoutGymMemberInput {
+  data: AlertUpdateManyMutationInput!
+  where: AlertScalarWhereInput!
+}
+
+input AlertUpdateManyWithoutGymMemberNestedInput {
+  connect: [AlertWhereUniqueInput!]
+  connectOrCreate: [AlertCreateOrConnectWithoutGymMemberInput!]
+  create: [AlertCreateWithoutGymMemberInput!]
+  createMany: AlertCreateManyGymMemberInputEnvelope
+  delete: [AlertWhereUniqueInput!]
+  deleteMany: [AlertScalarWhereInput!]
+  disconnect: [AlertWhereUniqueInput!]
+  set: [AlertWhereUniqueInput!]
+  update: [AlertUpdateWithWhereUniqueWithoutGymMemberInput!]
+  updateMany: [AlertUpdateManyWithWhereWithoutGymMemberInput!]
+  upsert: [AlertUpsertWithWhereUniqueWithoutGymMemberInput!]
+}
+
+input AlertUpdateWithWhereUniqueWithoutGymMemberInput {
+  data: AlertUpdateWithoutGymMemberInput!
+  where: AlertWhereUniqueInput!
+}
+
+input AlertUpdateWithoutGymMemberInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  reason: StringFieldUpdateOperationsInput
+  status: EnumAlertStatusFieldUpdateOperationsInput
+  type: EnumAlertTypeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input AlertUpsertWithWhereUniqueWithoutGymMemberInput {
+  create: AlertCreateWithoutGymMemberInput!
+  update: AlertUpdateWithoutGymMemberInput!
+  where: AlertWhereUniqueInput!
+}
+
+input AlertWhereInput {
+  AND: [AlertWhereInput!]
+  NOT: [AlertWhereInput!]
+  OR: [AlertWhereInput!]
+  createdAt: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  reason: StringFilter
+  status: EnumAlertStatusFilter
+  type: EnumAlertTypeFilter
+  updatedAt: DateTimeFilter
+}
+
+input AlertWhereUniqueInput {
+  AND: [AlertWhereInput!]
+  NOT: [AlertWhereInput!]
+  OR: [AlertWhereInput!]
+  createdAt: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: String
+  reason: StringFilter
+  status: EnumAlertStatusFilter
+  type: EnumAlertTypeFilter
+  updatedAt: DateTimeFilter
+}
+
+type Attendance {
+  createdAt: DateTime!
+  date: DateTime!
+  gymMember: GymMember!
+  gymMemberId: String!
+  id: ID!
+  status: AttendanceStatus!
+  updatedAt: DateTime!
+}
+
+input AttendanceCreateManyGymMemberInput {
+  createdAt: DateTime
+  date: DateTime!
+  id: String
+  status: AttendanceStatus!
+  updatedAt: DateTime
+}
+
+input AttendanceCreateManyGymMemberInputEnvelope {
+  data: [AttendanceCreateManyGymMemberInput!]!
+  skipDuplicates: Boolean
+}
+
+input AttendanceCreateNestedManyWithoutGymMemberInput {
+  connect: [AttendanceWhereUniqueInput!]
+  connectOrCreate: [AttendanceCreateOrConnectWithoutGymMemberInput!]
+  create: [AttendanceCreateWithoutGymMemberInput!]
+  createMany: AttendanceCreateManyGymMemberInputEnvelope
+}
+
+input AttendanceCreateOrConnectWithoutGymMemberInput {
+  create: AttendanceCreateWithoutGymMemberInput!
+  where: AttendanceWhereUniqueInput!
+}
+
+input AttendanceCreateWithoutGymMemberInput {
+  createdAt: DateTime
+  date: DateTime!
+  id: String
+  status: AttendanceStatus!
+  updatedAt: DateTime
+}
+
+input AttendanceListRelationFilter {
+  every: AttendanceWhereInput
+  none: AttendanceWhereInput
+  some: AttendanceWhereInput
+}
+
+input AttendanceOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input AttendanceScalarWhereInput {
+  AND: [AttendanceScalarWhereInput!]
+  NOT: [AttendanceScalarWhereInput!]
+  OR: [AttendanceScalarWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  status: EnumAttendanceStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+enum AttendanceStatus {
+  ABSENT
+  PRESENT
+}
+
+input AttendanceUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  date: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  status: EnumAttendanceStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input AttendanceUpdateManyWithWhereWithoutGymMemberInput {
+  data: AttendanceUpdateManyMutationInput!
+  where: AttendanceScalarWhereInput!
+}
+
+input AttendanceUpdateManyWithoutGymMemberNestedInput {
+  connect: [AttendanceWhereUniqueInput!]
+  connectOrCreate: [AttendanceCreateOrConnectWithoutGymMemberInput!]
+  create: [AttendanceCreateWithoutGymMemberInput!]
+  createMany: AttendanceCreateManyGymMemberInputEnvelope
+  delete: [AttendanceWhereUniqueInput!]
+  deleteMany: [AttendanceScalarWhereInput!]
+  disconnect: [AttendanceWhereUniqueInput!]
+  set: [AttendanceWhereUniqueInput!]
+  update: [AttendanceUpdateWithWhereUniqueWithoutGymMemberInput!]
+  updateMany: [AttendanceUpdateManyWithWhereWithoutGymMemberInput!]
+  upsert: [AttendanceUpsertWithWhereUniqueWithoutGymMemberInput!]
+}
+
+input AttendanceUpdateWithWhereUniqueWithoutGymMemberInput {
+  data: AttendanceUpdateWithoutGymMemberInput!
+  where: AttendanceWhereUniqueInput!
+}
+
+input AttendanceUpdateWithoutGymMemberInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  date: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  status: EnumAttendanceStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input AttendanceUpsertWithWhereUniqueWithoutGymMemberInput {
+  create: AttendanceCreateWithoutGymMemberInput!
+  update: AttendanceUpdateWithoutGymMemberInput!
+  where: AttendanceWhereUniqueInput!
+}
+
+input AttendanceWhereInput {
+  AND: [AttendanceWhereInput!]
+  NOT: [AttendanceWhereInput!]
+  OR: [AttendanceWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  status: EnumAttendanceStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+input AttendanceWhereUniqueInput {
+  AND: [AttendanceWhereInput!]
+  NOT: [AttendanceWhereInput!]
+  OR: [AttendanceWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: String
+  status: EnumAttendanceStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+input BoolFieldUpdateOperationsInput {
+  set: Boolean
+}
+
+input BoolFilter {
+  equals: Boolean
+  not: NestedBoolFilter
+}
+
+type Coach {
+  _count: CoachCount!
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime!
+  experience: Int
+  gymMembers: [GymMember!]
+  id: ID!
+  specialties: [String!]
+  updatedAt: DateTime!
+  user: User!
+  userId: String!
+}
+
+type CoachCount {
+  gymMembers: Int!
+}
+
+input CoachCreateNestedOneWithoutGymMembersInput {
+  connect: CoachWhereUniqueInput
+  connectOrCreate: CoachCreateOrConnectWithoutGymMembersInput
+  create: CoachCreateWithoutGymMembersInput
+}
+
+input CoachCreateNestedOneWithoutUserInput {
+  connect: CoachWhereUniqueInput
+  connectOrCreate: CoachCreateOrConnectWithoutUserInput
+  create: CoachCreateWithoutUserInput
+}
+
+input CoachCreateOrConnectWithoutGymMembersInput {
+  create: CoachCreateWithoutGymMembersInput!
+  where: CoachWhereUniqueInput!
+}
+
+input CoachCreateOrConnectWithoutUserInput {
+  create: CoachCreateWithoutUserInput!
+  where: CoachWhereUniqueInput!
+}
+
+input CoachCreateWithoutGymMembersInput {
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime
+  experience: Int
+  id: String
+  specialties: CoachCreatespecialtiesInput
+  updatedAt: DateTime
+  user: UserCreateNestedOneWithoutCoachInput!
+}
+
+input CoachCreateWithoutUserInput {
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime
+  experience: Int
+  gymMembers: GymMemberCreateNestedManyWithoutCoachInput
+  id: String
+  specialties: CoachCreatespecialtiesInput
+  updatedAt: DateTime
+}
+
+input CoachCreatespecialtiesInput {
+  set: [String!]!
+}
+
+input CoachNullableScalarRelationFilter {
+  is: CoachWhereInput
+  isNot: CoachWhereInput
+}
+
+input CoachOrderByWithRelationInput {
+  availability: SortOrderInput
+  biography: SortOrderInput
+  certification: SortOrderInput
+  createdAt: SortOrder
+  experience: SortOrderInput
+  gymMembers: GymMemberOrderByRelationAggregateInput
+  id: SortOrder
+  specialties: SortOrder
+  updatedAt: SortOrder
+  user: UserOrderByWithRelationInput
+  userId: SortOrder
+}
+
+input CoachUpdateOneWithoutGymMembersNestedInput {
+  connect: CoachWhereUniqueInput
+  connectOrCreate: CoachCreateOrConnectWithoutGymMembersInput
+  create: CoachCreateWithoutGymMembersInput
+  delete: CoachWhereInput
+  disconnect: CoachWhereInput
+  update: CoachUpdateToOneWithWhereWithoutGymMembersInput
+  upsert: CoachUpsertWithoutGymMembersInput
+}
+
+input CoachUpdateOneWithoutUserNestedInput {
+  connect: CoachWhereUniqueInput
+  connectOrCreate: CoachCreateOrConnectWithoutUserInput
+  create: CoachCreateWithoutUserInput
+  delete: CoachWhereInput
+  disconnect: CoachWhereInput
+  update: CoachUpdateToOneWithWhereWithoutUserInput
+  upsert: CoachUpsertWithoutUserInput
+}
+
+input CoachUpdateToOneWithWhereWithoutGymMembersInput {
+  data: CoachUpdateWithoutGymMembersInput!
+  where: CoachWhereInput
+}
+
+input CoachUpdateToOneWithWhereWithoutUserInput {
+  data: CoachUpdateWithoutUserInput!
+  where: CoachWhereInput
+}
+
+input CoachUpdateWithoutGymMembersInput {
+  availability: JSON
+  biography: NullableStringFieldUpdateOperationsInput
+  certification: NullableStringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  experience: NullableIntFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  specialties: CoachUpdatespecialtiesInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  user: UserUpdateOneRequiredWithoutCoachNestedInput
+}
+
+input CoachUpdateWithoutUserInput {
+  availability: JSON
+  biography: NullableStringFieldUpdateOperationsInput
+  certification: NullableStringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  experience: NullableIntFieldUpdateOperationsInput
+  gymMembers: GymMemberUpdateManyWithoutCoachNestedInput
+  id: StringFieldUpdateOperationsInput
+  specialties: CoachUpdatespecialtiesInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input CoachUpdatespecialtiesInput {
+  push: [String!]
+  set: [String!]
+}
+
+input CoachUpsertWithoutGymMembersInput {
+  create: CoachCreateWithoutGymMembersInput!
+  update: CoachUpdateWithoutGymMembersInput!
+  where: CoachWhereInput
+}
+
+input CoachUpsertWithoutUserInput {
+  create: CoachCreateWithoutUserInput!
+  update: CoachUpdateWithoutUserInput!
+  where: CoachWhereInput
+}
+
+input CoachWhereInput {
+  AND: [CoachWhereInput!]
+  NOT: [CoachWhereInput!]
+  OR: [CoachWhereInput!]
+  availability: JsonNullableFilter
+  biography: StringNullableFilter
+  certification: StringNullableFilter
+  createdAt: DateTimeFilter
+  experience: IntNullableFilter
+  gymMembers: GymMemberListRelationFilter
+  id: UuidFilter
+  specialties: StringNullableListFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input CoachWhereUniqueInput {
+  AND: [CoachWhereInput!]
+  NOT: [CoachWhereInput!]
+  OR: [CoachWhereInput!]
+  availability: JsonNullableFilter
+  biography: StringNullableFilter
+  certification: StringNullableFilter
+  createdAt: DateTimeFilter
+  experience: IntNullableFilter
+  gymMembers: GymMemberListRelationFilter
+  id: String
+  specialties: StringNullableListFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DateTimeFieldUpdateOperationsInput {
+  set: DateTime
+}
+
+input DateTimeFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: NestedDateTimeFilter
+  notIn: [DateTime!]
+}
+
+input DateTimeNullableFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: NestedDateTimeNullableFilter
+  notIn: [DateTime!]
+}
+
+input EnumAlertStatusFieldUpdateOperationsInput {
+  set: AlertStatus
+}
+
+input EnumAlertStatusFilter {
+  equals: AlertStatus
+  in: [AlertStatus!]
+  not: NestedEnumAlertStatusFilter
+  notIn: [AlertStatus!]
+}
+
+input EnumAlertTypeFieldUpdateOperationsInput {
+  set: AlertType
+}
+
+input EnumAlertTypeFilter {
+  equals: AlertType
+  in: [AlertType!]
+  not: NestedEnumAlertTypeFilter
+  notIn: [AlertType!]
+}
+
+input EnumAttendanceStatusFieldUpdateOperationsInput {
+  set: AttendanceStatus
+}
+
+input EnumAttendanceStatusFilter {
+  equals: AttendanceStatus
+  in: [AttendanceStatus!]
+  not: NestedEnumAttendanceStatusFilter
+  notIn: [AttendanceStatus!]
+}
+
+input EnumGoalStatusFieldUpdateOperationsInput {
+  set: GoalStatus
+}
+
+input EnumGoalStatusFilter {
+  equals: GoalStatus
+  in: [GoalStatus!]
+  not: NestedEnumGoalStatusFilter
+  notIn: [GoalStatus!]
+}
+
+input EnumMoodLevelFieldUpdateOperationsInput {
+  set: MoodLevel
+}
+
+input EnumMoodLevelFilter {
+  equals: MoodLevel
+  in: [MoodLevel!]
+  not: NestedEnumMoodLevelFilter
+  notIn: [MoodLevel!]
+}
+
+input EnumNotificationStatusFieldUpdateOperationsInput {
+  set: NotificationStatus
+}
+
+input EnumNotificationStatusFilter {
+  equals: NotificationStatus
+  in: [NotificationStatus!]
+  not: NestedEnumNotificationStatusFilter
+  notIn: [NotificationStatus!]
+}
+
+input EnumNotificationTypeFieldUpdateOperationsInput {
+  set: NotificationType
+}
+
+input EnumNotificationTypeFilter {
+  equals: NotificationType
+  in: [NotificationType!]
+  not: NestedEnumNotificationTypeFilter
+  notIn: [NotificationType!]
+}
+
+input EnumPermissionActionFieldUpdateOperationsInput {
+  set: PermissionAction
+}
+
+input EnumPermissionActionFilter {
+  equals: PermissionAction
+  in: [PermissionAction!]
+  not: NestedEnumPermissionActionFilter
+  notIn: [PermissionAction!]
+}
+
+input EnumPermissionResourceFieldUpdateOperationsInput {
+  set: PermissionResource
+}
+
+input EnumPermissionResourceFilter {
+  equals: PermissionResource
+  in: [PermissionResource!]
+  not: NestedEnumPermissionResourceFilter
+  notIn: [PermissionResource!]
+}
+
+input EnumPlanCategoryFieldUpdateOperationsInput {
+  set: PlanCategory
+}
+
+input EnumPlanCategoryFilter {
+  equals: PlanCategory
+  in: [PlanCategory!]
+  not: NestedEnumPlanCategoryFilter
+  notIn: [PlanCategory!]
+}
+
+input EnumPlanLevelFieldUpdateOperationsInput {
+  set: PlanLevel
+}
+
+input EnumPlanLevelFilter {
+  equals: PlanLevel
+  in: [PlanLevel!]
+  not: NestedEnumPlanLevelFilter
+  notIn: [PlanLevel!]
+}
+
+input EnumPlanStatusFieldUpdateOperationsInput {
+  set: PlanStatus
+}
+
+input EnumPlanStatusFilter {
+  equals: PlanStatus
+  in: [PlanStatus!]
+  not: NestedEnumPlanStatusFilter
+  notIn: [PlanStatus!]
+}
+
+input EnumUserStatusFieldUpdateOperationsInput {
+  set: UserStatus
+}
+
+input EnumUserStatusFilter {
+  equals: UserStatus
+  in: [UserStatus!]
+  not: NestedEnumUserStatusFilter
+  notIn: [UserStatus!]
+}
+
+type Goal {
+  createdAt: DateTime!
+  diet: String!
+  endDate: DateTime!
+  gymMember: GymMember!
+  gymMemberId: String!
+  id: ID!
+  startDate: DateTime!
+  status: GoalStatus!
+  type: String!
+  updatedAt: DateTime!
+}
+
+input GoalCreateManyGymMemberInput {
+  createdAt: DateTime
+  diet: String!
+  endDate: DateTime!
+  id: String
+  startDate: DateTime!
+  status: GoalStatus!
+  type: String!
+  updatedAt: DateTime
+}
+
+input GoalCreateManyGymMemberInputEnvelope {
+  data: [GoalCreateManyGymMemberInput!]!
+  skipDuplicates: Boolean
+}
+
+input GoalCreateNestedManyWithoutGymMemberInput {
+  connect: [GoalWhereUniqueInput!]
+  connectOrCreate: [GoalCreateOrConnectWithoutGymMemberInput!]
+  create: [GoalCreateWithoutGymMemberInput!]
+  createMany: GoalCreateManyGymMemberInputEnvelope
+}
+
+input GoalCreateOrConnectWithoutGymMemberInput {
+  create: GoalCreateWithoutGymMemberInput!
+  where: GoalWhereUniqueInput!
+}
+
+input GoalCreateWithoutGymMemberInput {
+  createdAt: DateTime
+  diet: String!
+  endDate: DateTime!
+  id: String
+  startDate: DateTime!
+  status: GoalStatus!
+  type: String!
+  updatedAt: DateTime
+}
+
+input GoalListRelationFilter {
+  every: GoalWhereInput
+  none: GoalWhereInput
+  some: GoalWhereInput
+}
+
+input GoalOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input GoalScalarWhereInput {
+  AND: [GoalScalarWhereInput!]
+  NOT: [GoalScalarWhereInput!]
+  OR: [GoalScalarWhereInput!]
+  createdAt: DateTimeFilter
+  diet: StringFilter
+  endDate: DateTimeFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  startDate: DateTimeFilter
+  status: EnumGoalStatusFilter
+  type: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+enum GoalStatus {
+  ACTIVE
+  ARCHIVED
+  COMPLETED
+  FAILED
+  INACTIVE
+}
+
+input GoalUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  diet: StringFieldUpdateOperationsInput
+  endDate: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  status: EnumGoalStatusFieldUpdateOperationsInput
+  type: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input GoalUpdateManyWithWhereWithoutGymMemberInput {
+  data: GoalUpdateManyMutationInput!
+  where: GoalScalarWhereInput!
+}
+
+input GoalUpdateManyWithoutGymMemberNestedInput {
+  connect: [GoalWhereUniqueInput!]
+  connectOrCreate: [GoalCreateOrConnectWithoutGymMemberInput!]
+  create: [GoalCreateWithoutGymMemberInput!]
+  createMany: GoalCreateManyGymMemberInputEnvelope
+  delete: [GoalWhereUniqueInput!]
+  deleteMany: [GoalScalarWhereInput!]
+  disconnect: [GoalWhereUniqueInput!]
+  set: [GoalWhereUniqueInput!]
+  update: [GoalUpdateWithWhereUniqueWithoutGymMemberInput!]
+  updateMany: [GoalUpdateManyWithWhereWithoutGymMemberInput!]
+  upsert: [GoalUpsertWithWhereUniqueWithoutGymMemberInput!]
+}
+
+input GoalUpdateWithWhereUniqueWithoutGymMemberInput {
+  data: GoalUpdateWithoutGymMemberInput!
+  where: GoalWhereUniqueInput!
+}
+
+input GoalUpdateWithoutGymMemberInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  diet: StringFieldUpdateOperationsInput
+  endDate: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  status: EnumGoalStatusFieldUpdateOperationsInput
+  type: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input GoalUpsertWithWhereUniqueWithoutGymMemberInput {
+  create: GoalCreateWithoutGymMemberInput!
+  update: GoalUpdateWithoutGymMemberInput!
+  where: GoalWhereUniqueInput!
+}
+
+input GoalWhereInput {
+  AND: [GoalWhereInput!]
+  NOT: [GoalWhereInput!]
+  OR: [GoalWhereInput!]
+  createdAt: DateTimeFilter
+  diet: StringFilter
+  endDate: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  startDate: DateTimeFilter
+  status: EnumGoalStatusFilter
+  type: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+input GoalWhereUniqueInput {
+  AND: [GoalWhereInput!]
+  NOT: [GoalWhereInput!]
+  OR: [GoalWhereInput!]
+  createdAt: DateTimeFilter
+  diet: StringFilter
+  endDate: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: String
+  startDate: DateTimeFilter
+  status: EnumGoalStatusFilter
+  type: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+type GymMember {
+  _count: GymMemberCount!
+  alerts: [Alert!]
+  attendances: [Attendance!]
+  coach: Coach
+  coachId: String
+  createdAt: DateTime!
+  endDate: DateTime
+  goals: [Goal!]
+  id: ID!
+  memberPlans: [MemberPlan!]
+  membershipId: String
+  moods: [Mood!]
+  nutritionist: Nutritionist
+  nutritionistId: String
+  startDate: DateTime!
+  updatedAt: DateTime!
+  user: User!
+  userId: String!
+}
+
+type GymMemberCount {
+  alerts: Int!
+  attendances: Int!
+  goals: Int!
+  memberPlans: Int!
+  moods: Int!
+}
+
+input GymMemberCreateManyCoachInput {
+  createdAt: DateTime
+  endDate: DateTime
+  id: String
+  membershipId: String
+  nutritionistId: String
+  startDate: DateTime!
+  updatedAt: DateTime
+  userId: String!
+}
+
+input GymMemberCreateManyCoachInputEnvelope {
+  data: [GymMemberCreateManyCoachInput!]!
+  skipDuplicates: Boolean
+}
+
+input GymMemberCreateManyNutritionistInput {
+  coachId: String
+  createdAt: DateTime
+  endDate: DateTime
+  id: String
+  membershipId: String
+  startDate: DateTime!
+  updatedAt: DateTime
+  userId: String!
+}
+
+input GymMemberCreateManyNutritionistInputEnvelope {
+  data: [GymMemberCreateManyNutritionistInput!]!
+  skipDuplicates: Boolean
+}
+
+input GymMemberCreateNestedManyWithoutCoachInput {
+  connect: [GymMemberWhereUniqueInput!]
+  connectOrCreate: [GymMemberCreateOrConnectWithoutCoachInput!]
+  create: [GymMemberCreateWithoutCoachInput!]
+  createMany: GymMemberCreateManyCoachInputEnvelope
+}
+
+input GymMemberCreateNestedManyWithoutNutritionistInput {
+  connect: [GymMemberWhereUniqueInput!]
+  connectOrCreate: [GymMemberCreateOrConnectWithoutNutritionistInput!]
+  create: [GymMemberCreateWithoutNutritionistInput!]
+  createMany: GymMemberCreateManyNutritionistInputEnvelope
+}
+
+input GymMemberCreateNestedOneWithoutUserInput {
+  connect: GymMemberWhereUniqueInput
+  connectOrCreate: GymMemberCreateOrConnectWithoutUserInput
+  create: GymMemberCreateWithoutUserInput
+}
+
+input GymMemberCreateOrConnectWithoutCoachInput {
+  create: GymMemberCreateWithoutCoachInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberCreateOrConnectWithoutNutritionistInput {
+  create: GymMemberCreateWithoutNutritionistInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberCreateOrConnectWithoutUserInput {
+  create: GymMemberCreateWithoutUserInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberCreateWithoutCoachInput {
+  alerts: AlertCreateNestedManyWithoutGymMemberInput
+  attendances: AttendanceCreateNestedManyWithoutGymMemberInput
+  createdAt: DateTime
+  endDate: DateTime
+  goals: GoalCreateNestedManyWithoutGymMemberInput
+  id: String
+  memberPlans: MemberPlanCreateNestedManyWithoutGymMemberInput
+  membershipId: String
+  moods: MoodCreateNestedManyWithoutGymMemberInput
+  nutritionist: NutritionistCreateNestedOneWithoutGymMembersInput
+  startDate: DateTime!
+  updatedAt: DateTime
+  user: UserCreateNestedOneWithoutGymMemberInput!
+}
+
+input GymMemberCreateWithoutNutritionistInput {
+  alerts: AlertCreateNestedManyWithoutGymMemberInput
+  attendances: AttendanceCreateNestedManyWithoutGymMemberInput
+  coach: CoachCreateNestedOneWithoutGymMembersInput
+  createdAt: DateTime
+  endDate: DateTime
+  goals: GoalCreateNestedManyWithoutGymMemberInput
+  id: String
+  memberPlans: MemberPlanCreateNestedManyWithoutGymMemberInput
+  membershipId: String
+  moods: MoodCreateNestedManyWithoutGymMemberInput
+  startDate: DateTime!
+  updatedAt: DateTime
+  user: UserCreateNestedOneWithoutGymMemberInput!
+}
+
+input GymMemberCreateWithoutUserInput {
+  alerts: AlertCreateNestedManyWithoutGymMemberInput
+  attendances: AttendanceCreateNestedManyWithoutGymMemberInput
+  coach: CoachCreateNestedOneWithoutGymMembersInput
+  createdAt: DateTime
+  endDate: DateTime
+  goals: GoalCreateNestedManyWithoutGymMemberInput
+  id: String
+  memberPlans: MemberPlanCreateNestedManyWithoutGymMemberInput
+  membershipId: String
+  moods: MoodCreateNestedManyWithoutGymMemberInput
+  nutritionist: NutritionistCreateNestedOneWithoutGymMembersInput
+  startDate: DateTime!
+  updatedAt: DateTime
+}
+
+input GymMemberListRelationFilter {
+  every: GymMemberWhereInput
+  none: GymMemberWhereInput
+  some: GymMemberWhereInput
+}
+
+input GymMemberNullableScalarRelationFilter {
+  is: GymMemberWhereInput
+  isNot: GymMemberWhereInput
+}
+
+input GymMemberOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input GymMemberOrderByWithRelationInput {
+  alerts: AlertOrderByRelationAggregateInput
+  attendances: AttendanceOrderByRelationAggregateInput
+  coach: CoachOrderByWithRelationInput
+  coachId: SortOrderInput
+  createdAt: SortOrder
+  endDate: SortOrderInput
+  goals: GoalOrderByRelationAggregateInput
+  id: SortOrder
+  memberPlans: MemberPlanOrderByRelationAggregateInput
+  membershipId: SortOrderInput
+  moods: MoodOrderByRelationAggregateInput
+  nutritionist: NutritionistOrderByWithRelationInput
+  nutritionistId: SortOrderInput
+  startDate: SortOrder
+  updatedAt: SortOrder
+  user: UserOrderByWithRelationInput
+  userId: SortOrder
+}
+
+input GymMemberScalarRelationFilter {
+  is: GymMemberWhereInput
+  isNot: GymMemberWhereInput
+}
+
+input GymMemberScalarWhereInput {
+  AND: [GymMemberScalarWhereInput!]
+  NOT: [GymMemberScalarWhereInput!]
+  OR: [GymMemberScalarWhereInput!]
+  coachId: UuidNullableFilter
+  createdAt: DateTimeFilter
+  endDate: DateTimeNullableFilter
+  id: UuidFilter
+  membershipId: StringNullableFilter
+  nutritionistId: UuidNullableFilter
+  startDate: DateTimeFilter
+  updatedAt: DateTimeFilter
+  userId: UuidFilter
+}
+
+input GymMemberUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: NullableDateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  membershipId: NullableStringFieldUpdateOperationsInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input GymMemberUpdateManyWithWhereWithoutCoachInput {
+  data: GymMemberUpdateManyMutationInput!
+  where: GymMemberScalarWhereInput!
+}
+
+input GymMemberUpdateManyWithWhereWithoutNutritionistInput {
+  data: GymMemberUpdateManyMutationInput!
+  where: GymMemberScalarWhereInput!
+}
+
+input GymMemberUpdateManyWithoutCoachNestedInput {
+  connect: [GymMemberWhereUniqueInput!]
+  connectOrCreate: [GymMemberCreateOrConnectWithoutCoachInput!]
+  create: [GymMemberCreateWithoutCoachInput!]
+  createMany: GymMemberCreateManyCoachInputEnvelope
+  delete: [GymMemberWhereUniqueInput!]
+  deleteMany: [GymMemberScalarWhereInput!]
+  disconnect: [GymMemberWhereUniqueInput!]
+  set: [GymMemberWhereUniqueInput!]
+  update: [GymMemberUpdateWithWhereUniqueWithoutCoachInput!]
+  updateMany: [GymMemberUpdateManyWithWhereWithoutCoachInput!]
+  upsert: [GymMemberUpsertWithWhereUniqueWithoutCoachInput!]
+}
+
+input GymMemberUpdateManyWithoutNutritionistNestedInput {
+  connect: [GymMemberWhereUniqueInput!]
+  connectOrCreate: [GymMemberCreateOrConnectWithoutNutritionistInput!]
+  create: [GymMemberCreateWithoutNutritionistInput!]
+  createMany: GymMemberCreateManyNutritionistInputEnvelope
+  delete: [GymMemberWhereUniqueInput!]
+  deleteMany: [GymMemberScalarWhereInput!]
+  disconnect: [GymMemberWhereUniqueInput!]
+  set: [GymMemberWhereUniqueInput!]
+  update: [GymMemberUpdateWithWhereUniqueWithoutNutritionistInput!]
+  updateMany: [GymMemberUpdateManyWithWhereWithoutNutritionistInput!]
+  upsert: [GymMemberUpsertWithWhereUniqueWithoutNutritionistInput!]
+}
+
+input GymMemberUpdateOneWithoutUserNestedInput {
+  connect: GymMemberWhereUniqueInput
+  connectOrCreate: GymMemberCreateOrConnectWithoutUserInput
+  create: GymMemberCreateWithoutUserInput
+  delete: GymMemberWhereInput
+  disconnect: GymMemberWhereInput
+  update: GymMemberUpdateToOneWithWhereWithoutUserInput
+  upsert: GymMemberUpsertWithoutUserInput
+}
+
+input GymMemberUpdateToOneWithWhereWithoutUserInput {
+  data: GymMemberUpdateWithoutUserInput!
+  where: GymMemberWhereInput
+}
+
+input GymMemberUpdateWithWhereUniqueWithoutCoachInput {
+  data: GymMemberUpdateWithoutCoachInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberUpdateWithWhereUniqueWithoutNutritionistInput {
+  data: GymMemberUpdateWithoutNutritionistInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberUpdateWithoutCoachInput {
+  alerts: AlertUpdateManyWithoutGymMemberNestedInput
+  attendances: AttendanceUpdateManyWithoutGymMemberNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: NullableDateTimeFieldUpdateOperationsInput
+  goals: GoalUpdateManyWithoutGymMemberNestedInput
+  id: StringFieldUpdateOperationsInput
+  memberPlans: MemberPlanUpdateManyWithoutGymMemberNestedInput
+  membershipId: NullableStringFieldUpdateOperationsInput
+  moods: MoodUpdateManyWithoutGymMemberNestedInput
+  nutritionist: NutritionistUpdateOneWithoutGymMembersNestedInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  user: UserUpdateOneRequiredWithoutGymMemberNestedInput
+}
+
+input GymMemberUpdateWithoutNutritionistInput {
+  alerts: AlertUpdateManyWithoutGymMemberNestedInput
+  attendances: AttendanceUpdateManyWithoutGymMemberNestedInput
+  coach: CoachUpdateOneWithoutGymMembersNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: NullableDateTimeFieldUpdateOperationsInput
+  goals: GoalUpdateManyWithoutGymMemberNestedInput
+  id: StringFieldUpdateOperationsInput
+  memberPlans: MemberPlanUpdateManyWithoutGymMemberNestedInput
+  membershipId: NullableStringFieldUpdateOperationsInput
+  moods: MoodUpdateManyWithoutGymMemberNestedInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  user: UserUpdateOneRequiredWithoutGymMemberNestedInput
+}
+
+input GymMemberUpdateWithoutUserInput {
+  alerts: AlertUpdateManyWithoutGymMemberNestedInput
+  attendances: AttendanceUpdateManyWithoutGymMemberNestedInput
+  coach: CoachUpdateOneWithoutGymMembersNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: NullableDateTimeFieldUpdateOperationsInput
+  goals: GoalUpdateManyWithoutGymMemberNestedInput
+  id: StringFieldUpdateOperationsInput
+  memberPlans: MemberPlanUpdateManyWithoutGymMemberNestedInput
+  membershipId: NullableStringFieldUpdateOperationsInput
+  moods: MoodUpdateManyWithoutGymMemberNestedInput
+  nutritionist: NutritionistUpdateOneWithoutGymMembersNestedInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input GymMemberUpsertWithWhereUniqueWithoutCoachInput {
+  create: GymMemberCreateWithoutCoachInput!
+  update: GymMemberUpdateWithoutCoachInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberUpsertWithWhereUniqueWithoutNutritionistInput {
+  create: GymMemberCreateWithoutNutritionistInput!
+  update: GymMemberUpdateWithoutNutritionistInput!
+  where: GymMemberWhereUniqueInput!
+}
+
+input GymMemberUpsertWithoutUserInput {
+  create: GymMemberCreateWithoutUserInput!
+  update: GymMemberUpdateWithoutUserInput!
+  where: GymMemberWhereInput
+}
+
+input GymMemberWhereInput {
+  AND: [GymMemberWhereInput!]
+  NOT: [GymMemberWhereInput!]
+  OR: [GymMemberWhereInput!]
+  alerts: AlertListRelationFilter
+  attendances: AttendanceListRelationFilter
+  coach: CoachNullableScalarRelationFilter
+  coachId: UuidNullableFilter
+  createdAt: DateTimeFilter
+  endDate: DateTimeNullableFilter
+  goals: GoalListRelationFilter
+  id: UuidFilter
+  memberPlans: MemberPlanListRelationFilter
+  membershipId: StringNullableFilter
+  moods: MoodListRelationFilter
+  nutritionist: NutritionistNullableScalarRelationFilter
+  nutritionistId: UuidNullableFilter
+  startDate: DateTimeFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input GymMemberWhereUniqueInput {
+  AND: [GymMemberWhereInput!]
+  NOT: [GymMemberWhereInput!]
+  OR: [GymMemberWhereInput!]
+  alerts: AlertListRelationFilter
+  attendances: AttendanceListRelationFilter
+  coach: CoachNullableScalarRelationFilter
+  coachId: UuidNullableFilter
+  createdAt: DateTimeFilter
+  endDate: DateTimeNullableFilter
+  goals: GoalListRelationFilter
+  id: String
+  memberPlans: MemberPlanListRelationFilter
+  membershipId: StringNullableFilter
+  moods: MoodListRelationFilter
+  nutritionist: NutritionistNullableScalarRelationFilter
+  nutritionistId: UuidNullableFilter
+  startDate: DateTimeFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: String
+}
+
+input IntFieldUpdateOperationsInput {
+  decrement: Int
+  divide: Int
+  increment: Int
+  multiply: Int
+  set: Int
+}
+
+input IntFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: NestedIntFilter
+  notIn: [Int!]
+}
+
+input IntNullableFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: NestedIntNullableFilter
+  notIn: [Int!]
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+input JsonNullableFilter {
+  array_contains: JSON
+  array_ends_with: JSON
+  array_starts_with: JSON
+  equals: JSON
+  gt: JSON
+  gte: JSON
+  lt: JSON
+  lte: JSON
+  mode: QueryMode
+  not: JSON
+  path: [String!]
+  string_contains: String
+  string_ends_with: String
+  string_starts_with: String
+}
+
+type MemberPlan {
+  createdAt: DateTime!
+  endDate: DateTime!
+  gymMember: GymMember!
+  gymMemberId: String!
+  id: ID!
+  notes: String
+  planTemplate: PlanTemplate!
+  planTemplateId: String!
+  startDate: DateTime!
+  status: PlanStatus!
+  updatedAt: DateTime!
+}
+
+input MemberPlanCreateManyGymMemberInput {
+  createdAt: DateTime
+  endDate: DateTime!
+  id: String
+  notes: String
+  planTemplateId: String!
+  startDate: DateTime!
+  status: PlanStatus
+  updatedAt: DateTime
+}
+
+input MemberPlanCreateManyGymMemberInputEnvelope {
+  data: [MemberPlanCreateManyGymMemberInput!]!
+  skipDuplicates: Boolean
+}
+
+input MemberPlanCreateNestedManyWithoutGymMemberInput {
+  connect: [MemberPlanWhereUniqueInput!]
+  connectOrCreate: [MemberPlanCreateOrConnectWithoutGymMemberInput!]
+  create: [MemberPlanCreateWithoutGymMemberInput!]
+  createMany: MemberPlanCreateManyGymMemberInputEnvelope
+}
+
+input MemberPlanCreateOrConnectWithoutGymMemberInput {
+  create: MemberPlanCreateWithoutGymMemberInput!
+  where: MemberPlanWhereUniqueInput!
+}
+
+input MemberPlanCreateWithoutGymMemberInput {
+  createdAt: DateTime
+  endDate: DateTime!
+  id: String
+  notes: String
+  planTemplate: PlanTemplateCreateNestedOneWithoutMemberPlansInput!
+  startDate: DateTime!
+  status: PlanStatus
+  updatedAt: DateTime
+}
+
+input MemberPlanListRelationFilter {
+  every: MemberPlanWhereInput
+  none: MemberPlanWhereInput
+  some: MemberPlanWhereInput
+}
+
+input MemberPlanOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input MemberPlanScalarWhereInput {
+  AND: [MemberPlanScalarWhereInput!]
+  NOT: [MemberPlanScalarWhereInput!]
+  OR: [MemberPlanScalarWhereInput!]
+  createdAt: DateTimeFilter
+  endDate: DateTimeFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  notes: StringNullableFilter
+  planTemplateId: UuidFilter
+  startDate: DateTimeFilter
+  status: EnumPlanStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+input MemberPlanUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  notes: NullableStringFieldUpdateOperationsInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  status: EnumPlanStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberPlanUpdateManyWithWhereWithoutGymMemberInput {
+  data: MemberPlanUpdateManyMutationInput!
+  where: MemberPlanScalarWhereInput!
+}
+
+input MemberPlanUpdateManyWithoutGymMemberNestedInput {
+  connect: [MemberPlanWhereUniqueInput!]
+  connectOrCreate: [MemberPlanCreateOrConnectWithoutGymMemberInput!]
+  create: [MemberPlanCreateWithoutGymMemberInput!]
+  createMany: MemberPlanCreateManyGymMemberInputEnvelope
+  delete: [MemberPlanWhereUniqueInput!]
+  deleteMany: [MemberPlanScalarWhereInput!]
+  disconnect: [MemberPlanWhereUniqueInput!]
+  set: [MemberPlanWhereUniqueInput!]
+  update: [MemberPlanUpdateWithWhereUniqueWithoutGymMemberInput!]
+  updateMany: [MemberPlanUpdateManyWithWhereWithoutGymMemberInput!]
+  upsert: [MemberPlanUpsertWithWhereUniqueWithoutGymMemberInput!]
+}
+
+input MemberPlanUpdateWithWhereUniqueWithoutGymMemberInput {
+  data: MemberPlanUpdateWithoutGymMemberInput!
+  where: MemberPlanWhereUniqueInput!
+}
+
+input MemberPlanUpdateWithoutGymMemberInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  endDate: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  notes: NullableStringFieldUpdateOperationsInput
+  planTemplate: PlanTemplateUpdateOneRequiredWithoutMemberPlansNestedInput
+  startDate: DateTimeFieldUpdateOperationsInput
+  status: EnumPlanStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MemberPlanUpsertWithWhereUniqueWithoutGymMemberInput {
+  create: MemberPlanCreateWithoutGymMemberInput!
+  update: MemberPlanUpdateWithoutGymMemberInput!
+  where: MemberPlanWhereUniqueInput!
+}
+
+input MemberPlanWhereInput {
+  AND: [MemberPlanWhereInput!]
+  NOT: [MemberPlanWhereInput!]
+  OR: [MemberPlanWhereInput!]
+  createdAt: DateTimeFilter
+  endDate: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  notes: StringNullableFilter
+  planTemplate: PlanTemplateScalarRelationFilter
+  planTemplateId: UuidFilter
+  startDate: DateTimeFilter
+  status: EnumPlanStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+input MemberPlanWhereUniqueInput {
+  AND: [MemberPlanWhereInput!]
+  NOT: [MemberPlanWhereInput!]
+  OR: [MemberPlanWhereInput!]
+  createdAt: DateTimeFilter
+  endDate: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: String
+  notes: StringNullableFilter
+  planTemplate: PlanTemplateScalarRelationFilter
+  planTemplateId: UuidFilter
+  startDate: DateTimeFilter
+  status: EnumPlanStatusFilter
+  updatedAt: DateTimeFilter
+}
+
+type Mood {
+  createdAt: DateTime!
+  date: DateTime!
+  gymMember: GymMember!
+  gymMemberId: String!
+  id: ID!
+  level: MoodLevel!
+  notes: String
+  updatedAt: DateTime!
+}
+
+input MoodCreateManyGymMemberInput {
+  createdAt: DateTime
+  date: DateTime!
+  id: String
+  level: MoodLevel!
+  notes: String
+  updatedAt: DateTime
+}
+
+input MoodCreateManyGymMemberInputEnvelope {
+  data: [MoodCreateManyGymMemberInput!]!
+  skipDuplicates: Boolean
+}
+
+input MoodCreateNestedManyWithoutGymMemberInput {
+  connect: [MoodWhereUniqueInput!]
+  connectOrCreate: [MoodCreateOrConnectWithoutGymMemberInput!]
+  create: [MoodCreateWithoutGymMemberInput!]
+  createMany: MoodCreateManyGymMemberInputEnvelope
+}
+
+input MoodCreateOrConnectWithoutGymMemberInput {
+  create: MoodCreateWithoutGymMemberInput!
+  where: MoodWhereUniqueInput!
+}
+
+input MoodCreateWithoutGymMemberInput {
+  createdAt: DateTime
+  date: DateTime!
+  id: String
+  level: MoodLevel!
+  notes: String
+  updatedAt: DateTime
+}
+
+enum MoodLevel {
+  BAD
+  GOOD
+  NEUTRAL
+  VERY_BAD
+  VERY_GOOD
+}
+
+input MoodListRelationFilter {
+  every: MoodWhereInput
+  none: MoodWhereInput
+  some: MoodWhereInput
+}
+
+input MoodOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input MoodScalarWhereInput {
+  AND: [MoodScalarWhereInput!]
+  NOT: [MoodScalarWhereInput!]
+  OR: [MoodScalarWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  level: EnumMoodLevelFilter
+  notes: StringNullableFilter
+  updatedAt: DateTimeFilter
+}
+
+input MoodUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  date: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  level: EnumMoodLevelFieldUpdateOperationsInput
+  notes: NullableStringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MoodUpdateManyWithWhereWithoutGymMemberInput {
+  data: MoodUpdateManyMutationInput!
+  where: MoodScalarWhereInput!
+}
+
+input MoodUpdateManyWithoutGymMemberNestedInput {
+  connect: [MoodWhereUniqueInput!]
+  connectOrCreate: [MoodCreateOrConnectWithoutGymMemberInput!]
+  create: [MoodCreateWithoutGymMemberInput!]
+  createMany: MoodCreateManyGymMemberInputEnvelope
+  delete: [MoodWhereUniqueInput!]
+  deleteMany: [MoodScalarWhereInput!]
+  disconnect: [MoodWhereUniqueInput!]
+  set: [MoodWhereUniqueInput!]
+  update: [MoodUpdateWithWhereUniqueWithoutGymMemberInput!]
+  updateMany: [MoodUpdateManyWithWhereWithoutGymMemberInput!]
+  upsert: [MoodUpsertWithWhereUniqueWithoutGymMemberInput!]
+}
+
+input MoodUpdateWithWhereUniqueWithoutGymMemberInput {
+  data: MoodUpdateWithoutGymMemberInput!
+  where: MoodWhereUniqueInput!
+}
+
+input MoodUpdateWithoutGymMemberInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  date: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  level: EnumMoodLevelFieldUpdateOperationsInput
+  notes: NullableStringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input MoodUpsertWithWhereUniqueWithoutGymMemberInput {
+  create: MoodCreateWithoutGymMemberInput!
+  update: MoodUpdateWithoutGymMemberInput!
+  where: MoodWhereUniqueInput!
+}
+
+input MoodWhereInput {
+  AND: [MoodWhereInput!]
+  NOT: [MoodWhereInput!]
+  OR: [MoodWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: UuidFilter
+  level: EnumMoodLevelFilter
+  notes: StringNullableFilter
+  updatedAt: DateTimeFilter
+}
+
+input MoodWhereUniqueInput {
+  AND: [MoodWhereInput!]
+  NOT: [MoodWhereInput!]
+  OR: [MoodWhereInput!]
+  createdAt: DateTimeFilter
+  date: DateTimeFilter
+  gymMember: GymMemberScalarRelationFilter
+  gymMemberId: UuidFilter
+  id: String
+  level: EnumMoodLevelFilter
+  notes: StringNullableFilter
+  updatedAt: DateTimeFilter
+}
+
+type Mutation {
+  createUser(data: UserCreateInput!): User!
+  deleteUser(id: String!): User!
+  updateUser(data: UserUpdateInput!, id: String!): User!
+}
+
+input NestedBoolFilter {
+  equals: Boolean
+  not: NestedBoolFilter
+}
+
+input NestedDateTimeFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: NestedDateTimeFilter
+  notIn: [DateTime!]
+}
+
+input NestedDateTimeNullableFilter {
+  equals: DateTime
+  gt: DateTime
+  gte: DateTime
+  in: [DateTime!]
+  lt: DateTime
+  lte: DateTime
+  not: NestedDateTimeNullableFilter
+  notIn: [DateTime!]
+}
+
+input NestedEnumAlertStatusFilter {
+  equals: AlertStatus
+  in: [AlertStatus!]
+  not: NestedEnumAlertStatusFilter
+  notIn: [AlertStatus!]
+}
+
+input NestedEnumAlertTypeFilter {
+  equals: AlertType
+  in: [AlertType!]
+  not: NestedEnumAlertTypeFilter
+  notIn: [AlertType!]
+}
+
+input NestedEnumAttendanceStatusFilter {
+  equals: AttendanceStatus
+  in: [AttendanceStatus!]
+  not: NestedEnumAttendanceStatusFilter
+  notIn: [AttendanceStatus!]
+}
+
+input NestedEnumGoalStatusFilter {
+  equals: GoalStatus
+  in: [GoalStatus!]
+  not: NestedEnumGoalStatusFilter
+  notIn: [GoalStatus!]
+}
+
+input NestedEnumMoodLevelFilter {
+  equals: MoodLevel
+  in: [MoodLevel!]
+  not: NestedEnumMoodLevelFilter
+  notIn: [MoodLevel!]
+}
+
+input NestedEnumNotificationStatusFilter {
+  equals: NotificationStatus
+  in: [NotificationStatus!]
+  not: NestedEnumNotificationStatusFilter
+  notIn: [NotificationStatus!]
+}
+
+input NestedEnumNotificationTypeFilter {
+  equals: NotificationType
+  in: [NotificationType!]
+  not: NestedEnumNotificationTypeFilter
+  notIn: [NotificationType!]
+}
+
+input NestedEnumPermissionActionFilter {
+  equals: PermissionAction
+  in: [PermissionAction!]
+  not: NestedEnumPermissionActionFilter
+  notIn: [PermissionAction!]
+}
+
+input NestedEnumPermissionResourceFilter {
+  equals: PermissionResource
+  in: [PermissionResource!]
+  not: NestedEnumPermissionResourceFilter
+  notIn: [PermissionResource!]
+}
+
+input NestedEnumPlanCategoryFilter {
+  equals: PlanCategory
+  in: [PlanCategory!]
+  not: NestedEnumPlanCategoryFilter
+  notIn: [PlanCategory!]
+}
+
+input NestedEnumPlanLevelFilter {
+  equals: PlanLevel
+  in: [PlanLevel!]
+  not: NestedEnumPlanLevelFilter
+  notIn: [PlanLevel!]
+}
+
+input NestedEnumPlanStatusFilter {
+  equals: PlanStatus
+  in: [PlanStatus!]
+  not: NestedEnumPlanStatusFilter
+  notIn: [PlanStatus!]
+}
+
+input NestedEnumUserStatusFilter {
+  equals: UserStatus
+  in: [UserStatus!]
+  not: NestedEnumUserStatusFilter
+  notIn: [UserStatus!]
+}
+
+input NestedIntFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: NestedIntFilter
+  notIn: [Int!]
+}
+
+input NestedIntNullableFilter {
+  equals: Int
+  gt: Int
+  gte: Int
+  in: [Int!]
+  lt: Int
+  lte: Int
+  not: NestedIntNullableFilter
+  notIn: [Int!]
+}
+
+input NestedStringFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  not: NestedStringFilter
+  notIn: [String!]
+  startsWith: String
+}
+
+input NestedStringNullableFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  not: NestedStringNullableFilter
+  notIn: [String!]
+  startsWith: String
+}
+
+input NestedUuidFilter {
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  not: NestedUuidFilter
+  notIn: [String!]
+}
+
+input NestedUuidNullableFilter {
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  not: NestedUuidNullableFilter
+  notIn: [String!]
+}
+
+type Notification {
+  content: String!
+  createdAt: DateTime!
+  id: ID!
+  status: NotificationStatus!
+  type: NotificationType!
+  updatedAt: DateTime!
+  user: User!
+  userId: String!
+}
+
+input NotificationCreateManyUserInput {
+  content: String!
+  createdAt: DateTime
+  id: String
+  status: NotificationStatus!
+  type: NotificationType!
+  updatedAt: DateTime
+}
+
+input NotificationCreateManyUserInputEnvelope {
+  data: [NotificationCreateManyUserInput!]!
+  skipDuplicates: Boolean
+}
+
+input NotificationCreateNestedManyWithoutUserInput {
+  connect: [NotificationWhereUniqueInput!]
+  connectOrCreate: [NotificationCreateOrConnectWithoutUserInput!]
+  create: [NotificationCreateWithoutUserInput!]
+  createMany: NotificationCreateManyUserInputEnvelope
+}
+
+input NotificationCreateOrConnectWithoutUserInput {
+  create: NotificationCreateWithoutUserInput!
+  where: NotificationWhereUniqueInput!
+}
+
+input NotificationCreateWithoutUserInput {
+  content: String!
+  createdAt: DateTime
+  id: String
+  status: NotificationStatus!
+  type: NotificationType!
+  updatedAt: DateTime
+}
+
+input NotificationListRelationFilter {
+  every: NotificationWhereInput
+  none: NotificationWhereInput
+  some: NotificationWhereInput
+}
+
+input NotificationOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input NotificationScalarWhereInput {
+  AND: [NotificationScalarWhereInput!]
+  NOT: [NotificationScalarWhereInput!]
+  OR: [NotificationScalarWhereInput!]
+  content: StringFilter
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  status: EnumNotificationStatusFilter
+  type: EnumNotificationTypeFilter
+  updatedAt: DateTimeFilter
+  userId: UuidFilter
+}
+
+enum NotificationStatus {
+  FAILED
+  PENDING
+  SENT
+}
+
+enum NotificationType {
+  EMAIL
+  PUSH
+  SMS
+  WHATSAPP
+}
+
+input NotificationUpdateManyMutationInput {
+  content: StringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  status: EnumNotificationStatusFieldUpdateOperationsInput
+  type: EnumNotificationTypeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input NotificationUpdateManyWithWhereWithoutUserInput {
+  data: NotificationUpdateManyMutationInput!
+  where: NotificationScalarWhereInput!
+}
+
+input NotificationUpdateManyWithoutUserNestedInput {
+  connect: [NotificationWhereUniqueInput!]
+  connectOrCreate: [NotificationCreateOrConnectWithoutUserInput!]
+  create: [NotificationCreateWithoutUserInput!]
+  createMany: NotificationCreateManyUserInputEnvelope
+  delete: [NotificationWhereUniqueInput!]
+  deleteMany: [NotificationScalarWhereInput!]
+  disconnect: [NotificationWhereUniqueInput!]
+  set: [NotificationWhereUniqueInput!]
+  update: [NotificationUpdateWithWhereUniqueWithoutUserInput!]
+  updateMany: [NotificationUpdateManyWithWhereWithoutUserInput!]
+  upsert: [NotificationUpsertWithWhereUniqueWithoutUserInput!]
+}
+
+input NotificationUpdateWithWhereUniqueWithoutUserInput {
+  data: NotificationUpdateWithoutUserInput!
+  where: NotificationWhereUniqueInput!
+}
+
+input NotificationUpdateWithoutUserInput {
+  content: StringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  status: EnumNotificationStatusFieldUpdateOperationsInput
+  type: EnumNotificationTypeFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input NotificationUpsertWithWhereUniqueWithoutUserInput {
+  create: NotificationCreateWithoutUserInput!
+  update: NotificationUpdateWithoutUserInput!
+  where: NotificationWhereUniqueInput!
+}
+
+input NotificationWhereInput {
+  AND: [NotificationWhereInput!]
+  NOT: [NotificationWhereInput!]
+  OR: [NotificationWhereInput!]
+  content: StringFilter
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  status: EnumNotificationStatusFilter
+  type: EnumNotificationTypeFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input NotificationWhereUniqueInput {
+  AND: [NotificationWhereInput!]
+  NOT: [NotificationWhereInput!]
+  OR: [NotificationWhereInput!]
+  content: StringFilter
+  createdAt: DateTimeFilter
+  id: String
+  status: EnumNotificationStatusFilter
+  type: EnumNotificationTypeFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input NullableDateTimeFieldUpdateOperationsInput {
+  set: DateTime
+}
+
+input NullableIntFieldUpdateOperationsInput {
+  decrement: Int
+  divide: Int
+  increment: Int
+  multiply: Int
+  set: Int
+}
+
+input NullableStringFieldUpdateOperationsInput {
+  set: String
+}
+
+enum NullsOrder {
+  first
+  last
+}
+
+type Nutritionist {
+  _count: NutritionistCount!
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime!
+  experience: Int
+  gymMembers: [GymMember!]
+  id: ID!
+  specialties: [String!]
+  updatedAt: DateTime!
+  user: User!
+  userId: String!
+}
+
+type NutritionistCount {
+  gymMembers: Int!
+}
+
+input NutritionistCreateNestedOneWithoutGymMembersInput {
+  connect: NutritionistWhereUniqueInput
+  connectOrCreate: NutritionistCreateOrConnectWithoutGymMembersInput
+  create: NutritionistCreateWithoutGymMembersInput
+}
+
+input NutritionistCreateNestedOneWithoutUserInput {
+  connect: NutritionistWhereUniqueInput
+  connectOrCreate: NutritionistCreateOrConnectWithoutUserInput
+  create: NutritionistCreateWithoutUserInput
+}
+
+input NutritionistCreateOrConnectWithoutGymMembersInput {
+  create: NutritionistCreateWithoutGymMembersInput!
+  where: NutritionistWhereUniqueInput!
+}
+
+input NutritionistCreateOrConnectWithoutUserInput {
+  create: NutritionistCreateWithoutUserInput!
+  where: NutritionistWhereUniqueInput!
+}
+
+input NutritionistCreateWithoutGymMembersInput {
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime
+  experience: Int
+  id: String
+  specialties: NutritionistCreatespecialtiesInput
+  updatedAt: DateTime
+  user: UserCreateNestedOneWithoutNutritionistInput!
+}
+
+input NutritionistCreateWithoutUserInput {
+  availability: JSON
+  biography: String
+  certification: String
+  createdAt: DateTime
+  experience: Int
+  gymMembers: GymMemberCreateNestedManyWithoutNutritionistInput
+  id: String
+  specialties: NutritionistCreatespecialtiesInput
+  updatedAt: DateTime
+}
+
+input NutritionistCreatespecialtiesInput {
+  set: [String!]!
+}
+
+input NutritionistNullableScalarRelationFilter {
+  is: NutritionistWhereInput
+  isNot: NutritionistWhereInput
+}
+
+input NutritionistOrderByWithRelationInput {
+  availability: SortOrderInput
+  biography: SortOrderInput
+  certification: SortOrderInput
+  createdAt: SortOrder
+  experience: SortOrderInput
+  gymMembers: GymMemberOrderByRelationAggregateInput
+  id: SortOrder
+  specialties: SortOrder
+  updatedAt: SortOrder
+  user: UserOrderByWithRelationInput
+  userId: SortOrder
+}
+
+input NutritionistUpdateOneWithoutGymMembersNestedInput {
+  connect: NutritionistWhereUniqueInput
+  connectOrCreate: NutritionistCreateOrConnectWithoutGymMembersInput
+  create: NutritionistCreateWithoutGymMembersInput
+  delete: NutritionistWhereInput
+  disconnect: NutritionistWhereInput
+  update: NutritionistUpdateToOneWithWhereWithoutGymMembersInput
+  upsert: NutritionistUpsertWithoutGymMembersInput
+}
+
+input NutritionistUpdateOneWithoutUserNestedInput {
+  connect: NutritionistWhereUniqueInput
+  connectOrCreate: NutritionistCreateOrConnectWithoutUserInput
+  create: NutritionistCreateWithoutUserInput
+  delete: NutritionistWhereInput
+  disconnect: NutritionistWhereInput
+  update: NutritionistUpdateToOneWithWhereWithoutUserInput
+  upsert: NutritionistUpsertWithoutUserInput
+}
+
+input NutritionistUpdateToOneWithWhereWithoutGymMembersInput {
+  data: NutritionistUpdateWithoutGymMembersInput!
+  where: NutritionistWhereInput
+}
+
+input NutritionistUpdateToOneWithWhereWithoutUserInput {
+  data: NutritionistUpdateWithoutUserInput!
+  where: NutritionistWhereInput
+}
+
+input NutritionistUpdateWithoutGymMembersInput {
+  availability: JSON
+  biography: NullableStringFieldUpdateOperationsInput
+  certification: NullableStringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  experience: NullableIntFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  specialties: NutritionistUpdatespecialtiesInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  user: UserUpdateOneRequiredWithoutNutritionistNestedInput
+}
+
+input NutritionistUpdateWithoutUserInput {
+  availability: JSON
+  biography: NullableStringFieldUpdateOperationsInput
+  certification: NullableStringFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  experience: NullableIntFieldUpdateOperationsInput
+  gymMembers: GymMemberUpdateManyWithoutNutritionistNestedInput
+  id: StringFieldUpdateOperationsInput
+  specialties: NutritionistUpdatespecialtiesInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input NutritionistUpdatespecialtiesInput {
+  push: [String!]
+  set: [String!]
+}
+
+input NutritionistUpsertWithoutGymMembersInput {
+  create: NutritionistCreateWithoutGymMembersInput!
+  update: NutritionistUpdateWithoutGymMembersInput!
+  where: NutritionistWhereInput
+}
+
+input NutritionistUpsertWithoutUserInput {
+  create: NutritionistCreateWithoutUserInput!
+  update: NutritionistUpdateWithoutUserInput!
+  where: NutritionistWhereInput
+}
+
+input NutritionistWhereInput {
+  AND: [NutritionistWhereInput!]
+  NOT: [NutritionistWhereInput!]
+  OR: [NutritionistWhereInput!]
+  availability: JsonNullableFilter
+  biography: StringNullableFilter
+  certification: StringNullableFilter
+  createdAt: DateTimeFilter
+  experience: IntNullableFilter
+  gymMembers: GymMemberListRelationFilter
+  id: UuidFilter
+  specialties: StringNullableListFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input NutritionistWhereUniqueInput {
+  AND: [NutritionistWhereInput!]
+  NOT: [NutritionistWhereInput!]
+  OR: [NutritionistWhereInput!]
+  availability: JsonNullableFilter
+  biography: StringNullableFilter
+  certification: StringNullableFilter
+  createdAt: DateTimeFilter
+  experience: IntNullableFilter
+  gymMembers: GymMemberListRelationFilter
+  id: String
+  specialties: StringNullableListFilter
+  updatedAt: DateTimeFilter
+  user: UserScalarRelationFilter
+  userId: String
+}
+
+type Permission {
+  _count: PermissionCount!
+  action: PermissionAction!
+  createdAt: DateTime!
+  id: ID!
+  resource: PermissionResource!
+  rolePermissions: [RolePermission!]
+  updatedAt: DateTime!
+}
+
+enum PermissionAction {
+  CREATE
+  DELETE
+  MANAGE
+  READ
+  UPDATE
+}
+
+input PermissionActionResourceCompoundUniqueInput {
+  action: PermissionAction!
+  resource: PermissionResource!
+}
+
+type PermissionCount {
+  rolePermissions: Int!
+}
+
+input PermissionCreateNestedOneWithoutRolePermissionsInput {
+  connect: PermissionWhereUniqueInput
+  connectOrCreate: PermissionCreateOrConnectWithoutRolePermissionsInput
+  create: PermissionCreateWithoutRolePermissionsInput
+}
+
+input PermissionCreateOrConnectWithoutRolePermissionsInput {
+  create: PermissionCreateWithoutRolePermissionsInput!
+  where: PermissionWhereUniqueInput!
+}
+
+input PermissionCreateWithoutRolePermissionsInput {
+  action: PermissionAction!
+  createdAt: DateTime
+  id: String
+  resource: PermissionResource!
+  updatedAt: DateTime
+}
+
+enum PermissionResource {
+  ALERTS
+  ATTENDANCES
+  GOALS
+  MOODS
+  NOTIFICATIONS
+  PROFILES
+  ROLES
+  USERS
+}
+
+input PermissionScalarRelationFilter {
+  is: PermissionWhereInput
+  isNot: PermissionWhereInput
+}
+
+input PermissionUpdateOneRequiredWithoutRolePermissionsNestedInput {
+  connect: PermissionWhereUniqueInput
+  connectOrCreate: PermissionCreateOrConnectWithoutRolePermissionsInput
+  create: PermissionCreateWithoutRolePermissionsInput
+  update: PermissionUpdateToOneWithWhereWithoutRolePermissionsInput
+  upsert: PermissionUpsertWithoutRolePermissionsInput
+}
+
+input PermissionUpdateToOneWithWhereWithoutRolePermissionsInput {
+  data: PermissionUpdateWithoutRolePermissionsInput!
+  where: PermissionWhereInput
+}
+
+input PermissionUpdateWithoutRolePermissionsInput {
+  action: EnumPermissionActionFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  resource: EnumPermissionResourceFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input PermissionUpsertWithoutRolePermissionsInput {
+  create: PermissionCreateWithoutRolePermissionsInput!
+  update: PermissionUpdateWithoutRolePermissionsInput!
+  where: PermissionWhereInput
+}
+
+input PermissionWhereInput {
+  AND: [PermissionWhereInput!]
+  NOT: [PermissionWhereInput!]
+  OR: [PermissionWhereInput!]
+  action: EnumPermissionActionFilter
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  resource: EnumPermissionResourceFilter
+  rolePermissions: RolePermissionListRelationFilter
+  updatedAt: DateTimeFilter
+}
+
+input PermissionWhereUniqueInput {
+  AND: [PermissionWhereInput!]
+  NOT: [PermissionWhereInput!]
+  OR: [PermissionWhereInput!]
+  action: EnumPermissionActionFilter
+  action_resource: PermissionActionResourceCompoundUniqueInput
+  createdAt: DateTimeFilter
+  id: String
+  resource: EnumPermissionResourceFilter
+  rolePermissions: RolePermissionListRelationFilter
+  updatedAt: DateTimeFilter
+}
+
+enum PlanCategory {
+  CARDIO
+  FLEXIBILITY
+  GENERAL_FITNESS
+  MUSCLE_GAIN
+  REHABILITATION
+  SPORTS_SPECIFIC
+  WEIGHT_LOSS
+}
+
+enum PlanLevel {
+  ADVANCED
+  BASIC
+  INTERMEDIATE
+  PREMIUM
+}
+
+enum PlanStatus {
+  ACTIVE
+  CANCELLED
+  COMPLETED
+  EXPIRED
+}
+
+type PlanTemplate {
+  _count: PlanTemplateCount!
+  category: PlanCategory!
+  createdAt: DateTime!
+  description: String!
+  duration: Int!
+  id: ID!
+  isActive: Boolean!
+  level: PlanLevel!
+  memberPlans: [MemberPlan!]
+  name: String!
+  updatedAt: DateTime!
+}
+
+type PlanTemplateCount {
+  memberPlans: Int!
+}
+
+input PlanTemplateCreateNestedOneWithoutMemberPlansInput {
+  connect: PlanTemplateWhereUniqueInput
+  connectOrCreate: PlanTemplateCreateOrConnectWithoutMemberPlansInput
+  create: PlanTemplateCreateWithoutMemberPlansInput
+}
+
+input PlanTemplateCreateOrConnectWithoutMemberPlansInput {
+  create: PlanTemplateCreateWithoutMemberPlansInput!
+  where: PlanTemplateWhereUniqueInput!
+}
+
+input PlanTemplateCreateWithoutMemberPlansInput {
+  category: PlanCategory!
+  createdAt: DateTime
+  description: String!
+  duration: Int!
+  id: String
+  isActive: Boolean
+  level: PlanLevel!
+  name: String!
+  updatedAt: DateTime
+}
+
+input PlanTemplateScalarRelationFilter {
+  is: PlanTemplateWhereInput
+  isNot: PlanTemplateWhereInput
+}
+
+input PlanTemplateUpdateOneRequiredWithoutMemberPlansNestedInput {
+  connect: PlanTemplateWhereUniqueInput
+  connectOrCreate: PlanTemplateCreateOrConnectWithoutMemberPlansInput
+  create: PlanTemplateCreateWithoutMemberPlansInput
+  update: PlanTemplateUpdateToOneWithWhereWithoutMemberPlansInput
+  upsert: PlanTemplateUpsertWithoutMemberPlansInput
+}
+
+input PlanTemplateUpdateToOneWithWhereWithoutMemberPlansInput {
+  data: PlanTemplateUpdateWithoutMemberPlansInput!
+  where: PlanTemplateWhereInput
+}
+
+input PlanTemplateUpdateWithoutMemberPlansInput {
+  category: EnumPlanCategoryFieldUpdateOperationsInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: StringFieldUpdateOperationsInput
+  duration: IntFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  isActive: BoolFieldUpdateOperationsInput
+  level: EnumPlanLevelFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input PlanTemplateUpsertWithoutMemberPlansInput {
+  create: PlanTemplateCreateWithoutMemberPlansInput!
+  update: PlanTemplateUpdateWithoutMemberPlansInput!
+  where: PlanTemplateWhereInput
+}
+
+input PlanTemplateWhereInput {
+  AND: [PlanTemplateWhereInput!]
+  NOT: [PlanTemplateWhereInput!]
+  OR: [PlanTemplateWhereInput!]
+  category: EnumPlanCategoryFilter
+  createdAt: DateTimeFilter
+  description: StringFilter
+  duration: IntFilter
+  id: UuidFilter
+  isActive: BoolFilter
+  level: EnumPlanLevelFilter
+  memberPlans: MemberPlanListRelationFilter
+  name: StringFilter
+  updatedAt: DateTimeFilter
+}
+
+input PlanTemplateWhereUniqueInput {
+  AND: [PlanTemplateWhereInput!]
+  NOT: [PlanTemplateWhereInput!]
+  OR: [PlanTemplateWhereInput!]
+  category: EnumPlanCategoryFilter
+  createdAt: DateTimeFilter
+  description: StringFilter
+  duration: IntFilter
+  id: String
+  isActive: BoolFilter
+  level: EnumPlanLevelFilter
+  memberPlans: MemberPlanListRelationFilter
+  name: String
+  updatedAt: DateTimeFilter
+}
+
+type Query {
+  user(where: UserWhereUniqueInput!): User
+  users(cursor: UserWhereUniqueInput, distinct: [UserScalarFieldEnum!], orderBy: [UserOrderByWithRelationInput!], skip: Int, take: Int, where: UserWhereInput): [User!]!
+}
+
+enum QueryMode {
+  default
+  insensitive
+}
+
+type Role {
+  _count: RoleCount!
+  createdAt: DateTime!
+  description: String
+  id: ID!
+  name: String!
+  permissions: [RolePermission!]
+  updatedAt: DateTime!
+  userRoles: [UserRole!]
+}
+
+type RoleCount {
+  permissions: Int!
+  userRoles: Int!
+}
+
+input RoleCreateNestedOneWithoutUserRolesInput {
+  connect: RoleWhereUniqueInput
+  connectOrCreate: RoleCreateOrConnectWithoutUserRolesInput
+  create: RoleCreateWithoutUserRolesInput
+}
+
+input RoleCreateOrConnectWithoutUserRolesInput {
+  create: RoleCreateWithoutUserRolesInput!
+  where: RoleWhereUniqueInput!
+}
+
+input RoleCreateWithoutUserRolesInput {
+  createdAt: DateTime
+  description: String
+  id: String
+  name: String!
+  permissions: RolePermissionCreateNestedManyWithoutRoleInput
+  updatedAt: DateTime
+}
+
+type RolePermission {
+  createdAt: DateTime!
+  id: ID!
+  permission: Permission!
+  permissionId: String!
+  role: Role!
+  roleId: String!
+}
+
+input RolePermissionCreateManyRoleInput {
+  createdAt: DateTime
+  id: String
+  permissionId: String!
+}
+
+input RolePermissionCreateManyRoleInputEnvelope {
+  data: [RolePermissionCreateManyRoleInput!]!
+  skipDuplicates: Boolean
+}
+
+input RolePermissionCreateNestedManyWithoutRoleInput {
+  connect: [RolePermissionWhereUniqueInput!]
+  connectOrCreate: [RolePermissionCreateOrConnectWithoutRoleInput!]
+  create: [RolePermissionCreateWithoutRoleInput!]
+  createMany: RolePermissionCreateManyRoleInputEnvelope
+}
+
+input RolePermissionCreateOrConnectWithoutRoleInput {
+  create: RolePermissionCreateWithoutRoleInput!
+  where: RolePermissionWhereUniqueInput!
+}
+
+input RolePermissionCreateWithoutRoleInput {
+  createdAt: DateTime
+  id: String
+  permission: PermissionCreateNestedOneWithoutRolePermissionsInput!
+}
+
+input RolePermissionListRelationFilter {
+  every: RolePermissionWhereInput
+  none: RolePermissionWhereInput
+  some: RolePermissionWhereInput
+}
+
+input RolePermissionRoleIdPermissionIdCompoundUniqueInput {
+  permissionId: String!
+  roleId: String!
+}
+
+input RolePermissionScalarWhereInput {
+  AND: [RolePermissionScalarWhereInput!]
+  NOT: [RolePermissionScalarWhereInput!]
+  OR: [RolePermissionScalarWhereInput!]
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  permissionId: UuidFilter
+  roleId: UuidFilter
+}
+
+input RolePermissionUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+}
+
+input RolePermissionUpdateManyWithWhereWithoutRoleInput {
+  data: RolePermissionUpdateManyMutationInput!
+  where: RolePermissionScalarWhereInput!
+}
+
+input RolePermissionUpdateManyWithoutRoleNestedInput {
+  connect: [RolePermissionWhereUniqueInput!]
+  connectOrCreate: [RolePermissionCreateOrConnectWithoutRoleInput!]
+  create: [RolePermissionCreateWithoutRoleInput!]
+  createMany: RolePermissionCreateManyRoleInputEnvelope
+  delete: [RolePermissionWhereUniqueInput!]
+  deleteMany: [RolePermissionScalarWhereInput!]
+  disconnect: [RolePermissionWhereUniqueInput!]
+  set: [RolePermissionWhereUniqueInput!]
+  update: [RolePermissionUpdateWithWhereUniqueWithoutRoleInput!]
+  updateMany: [RolePermissionUpdateManyWithWhereWithoutRoleInput!]
+  upsert: [RolePermissionUpsertWithWhereUniqueWithoutRoleInput!]
+}
+
+input RolePermissionUpdateWithWhereUniqueWithoutRoleInput {
+  data: RolePermissionUpdateWithoutRoleInput!
+  where: RolePermissionWhereUniqueInput!
+}
+
+input RolePermissionUpdateWithoutRoleInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  permission: PermissionUpdateOneRequiredWithoutRolePermissionsNestedInput
+}
+
+input RolePermissionUpsertWithWhereUniqueWithoutRoleInput {
+  create: RolePermissionCreateWithoutRoleInput!
+  update: RolePermissionUpdateWithoutRoleInput!
+  where: RolePermissionWhereUniqueInput!
+}
+
+input RolePermissionWhereInput {
+  AND: [RolePermissionWhereInput!]
+  NOT: [RolePermissionWhereInput!]
+  OR: [RolePermissionWhereInput!]
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  permission: PermissionScalarRelationFilter
+  permissionId: UuidFilter
+  role: RoleScalarRelationFilter
+  roleId: UuidFilter
+}
+
+input RolePermissionWhereUniqueInput {
+  AND: [RolePermissionWhereInput!]
+  NOT: [RolePermissionWhereInput!]
+  OR: [RolePermissionWhereInput!]
+  createdAt: DateTimeFilter
+  id: String
+  permission: PermissionScalarRelationFilter
+  permissionId: UuidFilter
+  role: RoleScalarRelationFilter
+  roleId: UuidFilter
+  roleId_permissionId: RolePermissionRoleIdPermissionIdCompoundUniqueInput
+}
+
+input RoleScalarRelationFilter {
+  is: RoleWhereInput
+  isNot: RoleWhereInput
+}
+
+input RoleUpdateOneRequiredWithoutUserRolesNestedInput {
+  connect: RoleWhereUniqueInput
+  connectOrCreate: RoleCreateOrConnectWithoutUserRolesInput
+  create: RoleCreateWithoutUserRolesInput
+  update: RoleUpdateToOneWithWhereWithoutUserRolesInput
+  upsert: RoleUpsertWithoutUserRolesInput
+}
+
+input RoleUpdateToOneWithWhereWithoutUserRolesInput {
+  data: RoleUpdateWithoutUserRolesInput!
+  where: RoleWhereInput
+}
+
+input RoleUpdateWithoutUserRolesInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  name: StringFieldUpdateOperationsInput
+  permissions: RolePermissionUpdateManyWithoutRoleNestedInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+}
+
+input RoleUpsertWithoutUserRolesInput {
+  create: RoleCreateWithoutUserRolesInput!
+  update: RoleUpdateWithoutUserRolesInput!
+  where: RoleWhereInput
+}
+
+input RoleWhereInput {
+  AND: [RoleWhereInput!]
+  NOT: [RoleWhereInput!]
+  OR: [RoleWhereInput!]
+  createdAt: DateTimeFilter
+  description: StringNullableFilter
+  id: UuidFilter
+  name: StringFilter
+  permissions: RolePermissionListRelationFilter
+  updatedAt: DateTimeFilter
+  userRoles: UserRoleListRelationFilter
+}
+
+input RoleWhereUniqueInput {
+  AND: [RoleWhereInput!]
+  NOT: [RoleWhereInput!]
+  OR: [RoleWhereInput!]
+  createdAt: DateTimeFilter
+  description: StringNullableFilter
+  id: String
+  name: String
+  permissions: RolePermissionListRelationFilter
+  updatedAt: DateTimeFilter
+  userRoles: UserRoleListRelationFilter
+}
+
+enum SortOrder {
+  asc
+  desc
+}
+
+input SortOrderInput {
+  nulls: NullsOrder
+  sort: SortOrder!
+}
+
+input StringFieldUpdateOperationsInput {
+  set: String
+}
+
+input StringFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: NestedStringFilter
+  notIn: [String!]
+  startsWith: String
+}
+
+input StringNullableFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: NestedStringNullableFilter
+  notIn: [String!]
+  startsWith: String
+}
+
+input StringNullableListFilter {
+  equals: [String!]
+  has: String
+  hasEvery: [String!]
+  hasSome: [String!]
+  isEmpty: Boolean
+}
+
+type User {
+  _count: UserCount!
+  coach: Coach
+  createdAt: DateTime!
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  gymMember: GymMember
+  id: ID!
+  imageUrl: String
+  lastName: String!
+  notifications: [Notification!]
+  nutritionist: Nutritionist
+  phone: String
+  status: UserStatus!
+  updatedAt: DateTime!
+  userRoles: [UserRole!]
+}
+
+type UserCount {
+  notifications: Int!
+  userRoles: Int!
+}
+
+input UserCreateInput {
+  coach: CoachCreateNestedOneWithoutUserInput
+  createdAt: DateTime
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  gymMember: GymMemberCreateNestedOneWithoutUserInput
+  id: String
+  imageUrl: String
+  lastName: String!
+  notifications: NotificationCreateNestedManyWithoutUserInput
+  nutritionist: NutritionistCreateNestedOneWithoutUserInput
+  phone: String
+  status: UserStatus
+  updatedAt: DateTime
+  userRoles: UserRoleCreateNestedManyWithoutUserInput
+}
+
+input UserCreateNestedOneWithoutCoachInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutCoachInput
+  create: UserCreateWithoutCoachInput
+}
+
+input UserCreateNestedOneWithoutGymMemberInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutGymMemberInput
+  create: UserCreateWithoutGymMemberInput
+}
+
+input UserCreateNestedOneWithoutNutritionistInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutNutritionistInput
+  create: UserCreateWithoutNutritionistInput
+}
+
+input UserCreateOrConnectWithoutCoachInput {
+  create: UserCreateWithoutCoachInput!
+  where: UserWhereUniqueInput!
+}
+
+input UserCreateOrConnectWithoutGymMemberInput {
+  create: UserCreateWithoutGymMemberInput!
+  where: UserWhereUniqueInput!
+}
+
+input UserCreateOrConnectWithoutNutritionistInput {
+  create: UserCreateWithoutNutritionistInput!
+  where: UserWhereUniqueInput!
+}
+
+input UserCreateWithoutCoachInput {
+  createdAt: DateTime
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  gymMember: GymMemberCreateNestedOneWithoutUserInput
+  id: String
+  imageUrl: String
+  lastName: String!
+  notifications: NotificationCreateNestedManyWithoutUserInput
+  nutritionist: NutritionistCreateNestedOneWithoutUserInput
+  phone: String
+  status: UserStatus
+  updatedAt: DateTime
+  userRoles: UserRoleCreateNestedManyWithoutUserInput
+}
+
+input UserCreateWithoutGymMemberInput {
+  coach: CoachCreateNestedOneWithoutUserInput
+  createdAt: DateTime
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  id: String
+  imageUrl: String
+  lastName: String!
+  notifications: NotificationCreateNestedManyWithoutUserInput
+  nutritionist: NutritionistCreateNestedOneWithoutUserInput
+  phone: String
+  status: UserStatus
+  updatedAt: DateTime
+  userRoles: UserRoleCreateNestedManyWithoutUserInput
+}
+
+input UserCreateWithoutNutritionistInput {
+  coach: CoachCreateNestedOneWithoutUserInput
+  createdAt: DateTime
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  gymMember: GymMemberCreateNestedOneWithoutUserInput
+  id: String
+  imageUrl: String
+  lastName: String!
+  notifications: NotificationCreateNestedManyWithoutUserInput
+  phone: String
+  status: UserStatus
+  updatedAt: DateTime
+  userRoles: UserRoleCreateNestedManyWithoutUserInput
+}
+
+input UserOrderByWithRelationInput {
+  coach: CoachOrderByWithRelationInput
+  createdAt: SortOrder
+  dateOfBirth: SortOrder
+  email: SortOrder
+  firstName: SortOrder
+  gymMember: GymMemberOrderByWithRelationInput
+  id: SortOrder
+  imageUrl: SortOrderInput
+  lastName: SortOrder
+  notifications: NotificationOrderByRelationAggregateInput
+  nutritionist: NutritionistOrderByWithRelationInput
+  phone: SortOrderInput
+  status: SortOrder
+  updatedAt: SortOrder
+  userRoles: UserRoleOrderByRelationAggregateInput
+}
+
+type UserRole {
+  createdAt: DateTime!
+  id: ID!
+  role: Role!
+  roleId: String!
+  user: User!
+  userId: String!
+}
+
+input UserRoleCreateManyUserInput {
+  createdAt: DateTime
+  id: String
+  roleId: String!
+}
+
+input UserRoleCreateManyUserInputEnvelope {
+  data: [UserRoleCreateManyUserInput!]!
+  skipDuplicates: Boolean
+}
+
+input UserRoleCreateNestedManyWithoutUserInput {
+  connect: [UserRoleWhereUniqueInput!]
+  connectOrCreate: [UserRoleCreateOrConnectWithoutUserInput!]
+  create: [UserRoleCreateWithoutUserInput!]
+  createMany: UserRoleCreateManyUserInputEnvelope
+}
+
+input UserRoleCreateOrConnectWithoutUserInput {
+  create: UserRoleCreateWithoutUserInput!
+  where: UserRoleWhereUniqueInput!
+}
+
+input UserRoleCreateWithoutUserInput {
+  createdAt: DateTime
+  id: String
+  role: RoleCreateNestedOneWithoutUserRolesInput!
+}
+
+input UserRoleListRelationFilter {
+  every: UserRoleWhereInput
+  none: UserRoleWhereInput
+  some: UserRoleWhereInput
+}
+
+input UserRoleOrderByRelationAggregateInput {
+  _count: SortOrder
+}
+
+input UserRoleScalarWhereInput {
+  AND: [UserRoleScalarWhereInput!]
+  NOT: [UserRoleScalarWhereInput!]
+  OR: [UserRoleScalarWhereInput!]
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  roleId: UuidFilter
+  userId: UuidFilter
+}
+
+input UserRoleUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+}
+
+input UserRoleUpdateManyWithWhereWithoutUserInput {
+  data: UserRoleUpdateManyMutationInput!
+  where: UserRoleScalarWhereInput!
+}
+
+input UserRoleUpdateManyWithoutUserNestedInput {
+  connect: [UserRoleWhereUniqueInput!]
+  connectOrCreate: [UserRoleCreateOrConnectWithoutUserInput!]
+  create: [UserRoleCreateWithoutUserInput!]
+  createMany: UserRoleCreateManyUserInputEnvelope
+  delete: [UserRoleWhereUniqueInput!]
+  deleteMany: [UserRoleScalarWhereInput!]
+  disconnect: [UserRoleWhereUniqueInput!]
+  set: [UserRoleWhereUniqueInput!]
+  update: [UserRoleUpdateWithWhereUniqueWithoutUserInput!]
+  updateMany: [UserRoleUpdateManyWithWhereWithoutUserInput!]
+  upsert: [UserRoleUpsertWithWhereUniqueWithoutUserInput!]
+}
+
+input UserRoleUpdateWithWhereUniqueWithoutUserInput {
+  data: UserRoleUpdateWithoutUserInput!
+  where: UserRoleWhereUniqueInput!
+}
+
+input UserRoleUpdateWithoutUserInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  role: RoleUpdateOneRequiredWithoutUserRolesNestedInput
+}
+
+input UserRoleUpsertWithWhereUniqueWithoutUserInput {
+  create: UserRoleCreateWithoutUserInput!
+  update: UserRoleUpdateWithoutUserInput!
+  where: UserRoleWhereUniqueInput!
+}
+
+input UserRoleUserIdRoleIdCompoundUniqueInput {
+  roleId: String!
+  userId: String!
+}
+
+input UserRoleWhereInput {
+  AND: [UserRoleWhereInput!]
+  NOT: [UserRoleWhereInput!]
+  OR: [UserRoleWhereInput!]
+  createdAt: DateTimeFilter
+  id: UuidFilter
+  role: RoleScalarRelationFilter
+  roleId: UuidFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+}
+
+input UserRoleWhereUniqueInput {
+  AND: [UserRoleWhereInput!]
+  NOT: [UserRoleWhereInput!]
+  OR: [UserRoleWhereInput!]
+  createdAt: DateTimeFilter
+  id: String
+  role: RoleScalarRelationFilter
+  roleId: UuidFilter
+  user: UserScalarRelationFilter
+  userId: UuidFilter
+  userId_roleId: UserRoleUserIdRoleIdCompoundUniqueInput
+}
+
+enum UserScalarFieldEnum {
+  createdAt
+  dateOfBirth
+  email
+  firstName
+  id
+  imageUrl
+  lastName
+  phone
+  status
+  updatedAt
+}
+
+input UserScalarRelationFilter {
+  is: UserWhereInput
+  isNot: UserWhereInput
+}
+
+enum UserStatus {
+  ACTIVE
+  ARCHIVED
+  INACTIVE
+  SUSPENDED
+}
+
+input UserUpdateInput {
+  coach: CoachUpdateOneWithoutUserNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  dateOfBirth: DateTimeFieldUpdateOperationsInput
+  email: StringFieldUpdateOperationsInput
+  firstName: StringFieldUpdateOperationsInput
+  gymMember: GymMemberUpdateOneWithoutUserNestedInput
+  id: StringFieldUpdateOperationsInput
+  imageUrl: NullableStringFieldUpdateOperationsInput
+  lastName: StringFieldUpdateOperationsInput
+  notifications: NotificationUpdateManyWithoutUserNestedInput
+  nutritionist: NutritionistUpdateOneWithoutUserNestedInput
+  phone: NullableStringFieldUpdateOperationsInput
+  status: EnumUserStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  userRoles: UserRoleUpdateManyWithoutUserNestedInput
+}
+
+input UserUpdateOneRequiredWithoutCoachNestedInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutCoachInput
+  create: UserCreateWithoutCoachInput
+  update: UserUpdateToOneWithWhereWithoutCoachInput
+  upsert: UserUpsertWithoutCoachInput
+}
+
+input UserUpdateOneRequiredWithoutGymMemberNestedInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutGymMemberInput
+  create: UserCreateWithoutGymMemberInput
+  update: UserUpdateToOneWithWhereWithoutGymMemberInput
+  upsert: UserUpsertWithoutGymMemberInput
+}
+
+input UserUpdateOneRequiredWithoutNutritionistNestedInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutNutritionistInput
+  create: UserCreateWithoutNutritionistInput
+  update: UserUpdateToOneWithWhereWithoutNutritionistInput
+  upsert: UserUpsertWithoutNutritionistInput
+}
+
+input UserUpdateToOneWithWhereWithoutCoachInput {
+  data: UserUpdateWithoutCoachInput!
+  where: UserWhereInput
+}
+
+input UserUpdateToOneWithWhereWithoutGymMemberInput {
+  data: UserUpdateWithoutGymMemberInput!
+  where: UserWhereInput
+}
+
+input UserUpdateToOneWithWhereWithoutNutritionistInput {
+  data: UserUpdateWithoutNutritionistInput!
+  where: UserWhereInput
+}
+
+input UserUpdateWithoutCoachInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  dateOfBirth: DateTimeFieldUpdateOperationsInput
+  email: StringFieldUpdateOperationsInput
+  firstName: StringFieldUpdateOperationsInput
+  gymMember: GymMemberUpdateOneWithoutUserNestedInput
+  id: StringFieldUpdateOperationsInput
+  imageUrl: NullableStringFieldUpdateOperationsInput
+  lastName: StringFieldUpdateOperationsInput
+  notifications: NotificationUpdateManyWithoutUserNestedInput
+  nutritionist: NutritionistUpdateOneWithoutUserNestedInput
+  phone: NullableStringFieldUpdateOperationsInput
+  status: EnumUserStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  userRoles: UserRoleUpdateManyWithoutUserNestedInput
+}
+
+input UserUpdateWithoutGymMemberInput {
+  coach: CoachUpdateOneWithoutUserNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  dateOfBirth: DateTimeFieldUpdateOperationsInput
+  email: StringFieldUpdateOperationsInput
+  firstName: StringFieldUpdateOperationsInput
+  id: StringFieldUpdateOperationsInput
+  imageUrl: NullableStringFieldUpdateOperationsInput
+  lastName: StringFieldUpdateOperationsInput
+  notifications: NotificationUpdateManyWithoutUserNestedInput
+  nutritionist: NutritionistUpdateOneWithoutUserNestedInput
+  phone: NullableStringFieldUpdateOperationsInput
+  status: EnumUserStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  userRoles: UserRoleUpdateManyWithoutUserNestedInput
+}
+
+input UserUpdateWithoutNutritionistInput {
+  coach: CoachUpdateOneWithoutUserNestedInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  dateOfBirth: DateTimeFieldUpdateOperationsInput
+  email: StringFieldUpdateOperationsInput
+  firstName: StringFieldUpdateOperationsInput
+  gymMember: GymMemberUpdateOneWithoutUserNestedInput
+  id: StringFieldUpdateOperationsInput
+  imageUrl: NullableStringFieldUpdateOperationsInput
+  lastName: StringFieldUpdateOperationsInput
+  notifications: NotificationUpdateManyWithoutUserNestedInput
+  phone: NullableStringFieldUpdateOperationsInput
+  status: EnumUserStatusFieldUpdateOperationsInput
+  updatedAt: DateTimeFieldUpdateOperationsInput
+  userRoles: UserRoleUpdateManyWithoutUserNestedInput
+}
+
+input UserUpsertWithoutCoachInput {
+  create: UserCreateWithoutCoachInput!
+  update: UserUpdateWithoutCoachInput!
+  where: UserWhereInput
+}
+
+input UserUpsertWithoutGymMemberInput {
+  create: UserCreateWithoutGymMemberInput!
+  update: UserUpdateWithoutGymMemberInput!
+  where: UserWhereInput
+}
+
+input UserUpsertWithoutNutritionistInput {
+  create: UserCreateWithoutNutritionistInput!
+  update: UserUpdateWithoutNutritionistInput!
+  where: UserWhereInput
+}
+
+input UserWhereInput {
+  AND: [UserWhereInput!]
+  NOT: [UserWhereInput!]
+  OR: [UserWhereInput!]
+  coach: CoachNullableScalarRelationFilter
+  createdAt: DateTimeFilter
+  dateOfBirth: DateTimeFilter
+  email: StringFilter
+  firstName: StringFilter
+  gymMember: GymMemberNullableScalarRelationFilter
+  id: UuidFilter
+  imageUrl: StringNullableFilter
+  lastName: StringFilter
+  notifications: NotificationListRelationFilter
+  nutritionist: NutritionistNullableScalarRelationFilter
+  phone: StringNullableFilter
+  status: EnumUserStatusFilter
+  updatedAt: DateTimeFilter
+  userRoles: UserRoleListRelationFilter
+}
+
+input UserWhereUniqueInput {
+  AND: [UserWhereInput!]
+  NOT: [UserWhereInput!]
+  OR: [UserWhereInput!]
+  coach: CoachNullableScalarRelationFilter
+  createdAt: DateTimeFilter
+  dateOfBirth: DateTimeFilter
+  email: String
+  firstName: StringFilter
+  gymMember: GymMemberNullableScalarRelationFilter
+  id: String
+  imageUrl: StringNullableFilter
+  lastName: StringFilter
+  notifications: NotificationListRelationFilter
+  nutritionist: NutritionistNullableScalarRelationFilter
+  phone: StringNullableFilter
+  status: EnumUserStatusFilter
+  updatedAt: DateTimeFilter
+  userRoles: UserRoleListRelationFilter
+}
+
+input UuidFilter {
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: NestedUuidFilter
+  notIn: [String!]
+}
+
+input UuidNullableFilter {
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  mode: QueryMode
+  not: NestedUuidNullableFilter
+  notIn: [String!]
+}

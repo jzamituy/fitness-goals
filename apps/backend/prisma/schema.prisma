@@ -13,6 +13,14 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Add this new generator
+generator nestgraphql {
+  provider        = "prisma-nestjs-graphql"
+  output          = "../src/generated/graphql"
+  nestJsGraphQL   = true
+  reExport        = All
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")

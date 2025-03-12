@@ -1,0 +1,59 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserInput {
+  coachId: String
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  lastName: String!
+  nutritionistId: String
+  phone: String
+  userType: UserType!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Mutation {
+  createUser(input: CreateUserInput!): User!
+}
+
+type Query {
+  user(id: ID!): User
+  users: [User!]!
+}
+
+type User {
+  clients: [User!]
+  coach: User
+  coachees: [User!]
+  createdAt: DateTime!
+  dateOfBirth: DateTime!
+  email: String!
+  firstName: String!
+  id: ID!
+  imageUrl: String
+  lastName: String!
+  nutritionist: User
+  phone: String
+  status: UserStatus!
+  updatedAt: DateTime!
+  userType: UserType!
+}
+
+enum UserStatus {
+  ACTIVE
+  ARCHIVED
+  INACTIVE
+  SUSPENDED
+}
+
+enum UserType {
+  COACH
+  GYM_MEMBER
+  NUTRITIONIST
+}

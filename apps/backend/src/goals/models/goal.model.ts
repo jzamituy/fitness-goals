@@ -1,6 +1,6 @@
 import { Field, ID, ObjectType, registerEnumType } from '@nestjs/graphql';
 import { Goal as PrismaGoal } from '@prisma/client';
-import { User } from '../../users/models/user.model';
+import { User } from '../../generated/graphql';
 
 export enum GoalStatus {
   ACTIVE = 'ACTIVE',
